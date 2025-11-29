@@ -52,7 +52,7 @@ export default function AboutPage() {
                 ))}
               </div>
               <Image
-                src="/hero-sedan.png"
+                src="/hero-sedan1.png"
                 alt="Sri Ram Cabs fleet"
                 width={600}
                 height={320}
