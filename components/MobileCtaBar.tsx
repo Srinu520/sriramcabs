@@ -21,7 +21,7 @@ export default function MobileCtaBar() {
           Call
         </a>
         <a
-          href="https://wa.me/917411606748?text=Hi%20Sri%20Ram%20Cabs,%20I%20want%20to%20book%20a%20cab."
+          href="https://wa.me/917411606748?text=Hi%20Sree%20Khushi%20Tours%20%26%20Travels,%20I%20want%20to%20book%20a%20cab."
           className="flex w-1/2 items-center justify-center gap-2 rounded-xl border border-brand-gold/60 bg-brand-cream px-4 py-3 text-sm font-semibold text-brand-dark shadow-soft transition-all duration-200 hover:-translate-y-0.5"
         >
           <FaWhatsapp />
