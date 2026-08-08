@@ -37,7 +37,7 @@ const structuredData = {
   name: "Sree Khushi Tours & Travels",
   url: siteUrl,
   telephone: "+91-7411606748",
-  email: "sriramcabs@gmail.com",
+  email: "sreekhushitours@gmail.com",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Bangalore",
