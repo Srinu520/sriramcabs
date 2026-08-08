@@ -4,9 +4,9 @@ import { MotionSection } from "@/components/MotionSection";
 import { FiClock, FiMail, FiMapPin, FiPhone } from "react-icons/fi";
 
 export const metadata: Metadata = {
-  title: "Book a Cab in Bangalore | Contact Sri Ram Cabs",
+  title: "Book a Cab in Bangalore | Contact Sree Khushi Tours & Travels",
   description:
-    "Call, WhatsApp or submit the form to book a cab in Bangalore. Sri Ram Cabs offers local, airport and outstation taxi service 24/7.",
+    "Call, WhatsApp or submit the form to book a cab in Bangalore. Sree Khushi Tours & Travels offers local, airport, outstation and tour services 24/7.",
 };
 
 export default function ContactPage() {
@@ -44,7 +44,7 @@ export default function ContactPage() {
               </div>
               <div className="flex items-center gap-2">
                 <FiMapPin className="text-brand-green" />
-                <span>Sri Ram Cabs, Bangalore, Karnataka, India</span>
+                <span>Sree Khushi Tours & Travels, Bangalore, Karnataka, India</span>
               </div>
               <div className="flex items-center gap-2">
                 <FiClock className="text-brand-green" />
