@@ -3,6 +3,10 @@ import BookingForm from "@/components/BookingForm";
 import { MotionSection } from "@/components/MotionSection";
 import { FiClock, FiMail, FiMapPin, FiPhone } from "react-icons/fi";
 
+const googleBusinessUrl = "https://share.google/DhlK8O4MyLgjx3zKh";
+const googleMapEmbedUrl =
+  "https://www.google.com/maps?q=Sree%20Khushi%20Tours%20%26%20Travels%207411606748&output=embed";
+
 export const metadata: Metadata = {
   title: "Book a Cab in Bangalore | Contact Sree Khushi Tours & Travels",
   description:
@@ -42,9 +46,19 @@ export default function ContactPage() {
                   sreekhushitours@gmail.com
                 </a>
               </div>
-              <div className="flex items-center gap-2">
-                <FiMapPin className="text-brand-green" />
-                <span>Sree Khushi Tours & Travels, Bangalore, Karnataka, India</span>
+              <div className="flex items-start gap-2">
+                <FiMapPin className="mt-0.5 shrink-0 text-brand-green" />
+                <div>
+                  <p className="font-semibold text-brand-dark">Sree Khushi Tours & Travels</p>
+                  <a
+                    href={googleBusinessUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-medium text-brand-green hover:text-brand-dark"
+                  >
+                    View complete address & directions on Google Maps
+                  </a>
+                </div>
               </div>
               <div className="flex items-center gap-2">
                 <FiClock className="text-brand-green" />
@@ -53,12 +67,23 @@ export default function ContactPage() {
             </div>
             <div className="mt-6 overflow-hidden rounded-2xl border border-brand-gold/40 bg-brand-cream/70">
               <iframe
-                title="Bangalore Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.084918010749!2d77.5946!3d12.9716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c1a6f00f%3A0x89f2c6e8c7c3!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v00000000000"
+                title="Sree Khushi Tours & Travels location"
+                src={googleMapEmbedUrl}
                 className="h-64 w-full border-0"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
               />
+            </div>
+            <div className="mt-3 text-center">
+              <a
+                href={googleBusinessUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-semibold text-brand-green hover:text-brand-dark"
+              >
+                Open exact location in Google Maps →
+              </a>
             </div>
           </div>
         </MotionSection>
