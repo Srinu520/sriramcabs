@@ -32,14 +32,14 @@ export default function ContactPage() {
               </div>
               <div className="flex items-center gap-2">
                 <FiPhone className="text-brand-green" />
-                <a href="tel:+916301030863" className="hover:text-brand-dark">
-                  +91 6301030863
+                <a href="tel:+918919602258" className="hover:text-brand-dark">
+                  +91 8919602258
                 </a>
               </div>
               <div className="flex items-center gap-2">
                 <FiMail className="text-brand-green" />
-                <a href="mailto:sriramcabs@gmail.com" className="hover:text-brand-dark">
-                  sriramcabs@gmail.com
+                <a href="mailto:sreekhushitours@gmail.com" className="hover:text-brand-dark">
+                  sreekhushitours@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-2">
