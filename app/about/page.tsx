@@ -25,9 +25,9 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-brand-dark/85 to-brand-green/80" />
         <div className="relative grid gap-8 p-8 text-white lg:grid-cols-2">
           <MotionSection>
-            <h1 className="text-3xl font-bold">About Sri Ram Cabs</h1>
+            <h1 className="text-3xl font-bold">About Sree Khushi Tours & Travels</h1>
             <p className="mt-3 text-lg text-white/85">
-              Based in Bangalore, Sri Ram Cabs is led by Rama Krishna with 5+ years of dedicated service.
+              Based in Bangalore, Sree Khushi Tours & Travels is led by Rama Krishna with 5+ years of dedicated service.
               We focus on safety, cleanliness and trust—serving families, corporate travellers, pilgrims and tourists.
             </p>
             <p className="mt-2 text-sm text-white/75">
@@ -53,7 +53,7 @@ export default function AboutPage() {
               </div>
               <Image
                 src="/hero-sedan1.png"
-                alt="Sri Ram Cabs fleet"
+                alt="Sree Khushi Tours & Travels fleet"
                 width={600}
                 height={320}
                 className="mx-auto mt-4 drop-shadow-2xl"
