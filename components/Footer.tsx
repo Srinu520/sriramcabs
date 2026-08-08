@@ -20,15 +20,15 @@ export default function Footer() {
         <div className="max-w-sm space-y-3">
           <div className="flex items-center gap-2">
             <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-brand-green to-brand-dark text-white shadow-glow">
-              SR
+              SK
             </span>
             <div>
-              <p className="text-lg font-semibold text-brand-dark">Sri Ram Cabs</p>
-              <p className="text-sm text-brand-dark/70">Safe, clean & trusted rides</p>
+              <p className="text-lg font-semibold text-brand-dark">Sree Khushi Tours & Travels</p>
+              <p className="text-sm text-brand-dark/70">Safe, clean & trusted journeys</p>
             </div>
           </div>
           <p className="text-sm leading-relaxed text-brand-dark/80">
-            24/7 cab service in Bangalore for local, airport, outstation and pilgrimage travel.
+            24/7 cab and travel service in Bangalore for local, airport, outstation and pilgrimage travel.
             Transparent pricing, polite drivers and clean cars every ride.
           </p>
         </div>
@@ -54,19 +54,19 @@ export default function Footer() {
           </div>
           <div className="flex items-center gap-2">
             <FiPhone className="text-brand-green" />
-            <a href="tel:+916301030863" className="hover:text-brand-dark">
-              +91 6301030863
+            <a href="tel:+918919602258" className="hover:text-brand-dark">
+              +91 8919602258
             </a>
           </div>
           <div className="flex items-center gap-2">
             <FiMail className="text-brand-green" />
-            <a href="mailto:sriramcabs@gmail.com" className="hover:text-brand-dark">
-              sriramcabs@gmail.com
+            <a href="mailto:sreekhushitours@gmail.com" className="hover:text-brand-dark">
+              sreekhushitours@gmail.com
             </a>
           </div>
           <div className="flex items-center gap-2">
             <FiMapPin className="text-brand-green" />
-            <span>Sri Ram Cabs, Bangalore, Karnataka, India</span>
+            <span>Sree Khushi Tours & Travels, Bangalore, Karnataka, India</span>
           </div>
           <div className="flex items-center gap-2">
             <FiClock className="text-brand-green" />
@@ -75,9 +75,9 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-brand-gold/30 bg-brand-cream/70 py-4 text-center text-xs text-brand-dark/70">
-        <p>© {year} Sri Ram Cabs. All rights reserved.</p>
+        <p>© {year} Sree Khushi Tours & Travels. All rights reserved.</p>
         <p className="mt-1">
-          24/7 Cab Service in Bangalore | Local, Airport & Outstation Cabs Across India.
+          24/7 Cab & Travel Service in Bangalore | Local, Airport & Outstation Travel Across India.
         </p>
       </div>
     </footer>

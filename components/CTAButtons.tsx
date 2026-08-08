@@ -32,7 +32,7 @@ export default function CTAButtons({
       </a>
       {showWhatsApp && (
         <a
-          href="https://wa.me/917411606748?text=Hi%20Sri%20Ram%20Cabs,%20I%20want%20to%20book%20a%20cab."
+          href="https://wa.me/917411606748?text=Hi%20Sree%20Khushi%20Tours%20%26%20Travels,%20I%20want%20to%20book%20a%20cab."
           className="btn-secondary"
         >
           <FaWhatsapp /> WhatsApp

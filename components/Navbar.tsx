@@ -29,8 +29,8 @@ export default function Navbar() {
               <FiTruck className="text-lg" />
             </span>
             <div className="leading-tight">
-              <p className="text-base">Sri Ram Cabs</p>
-              <p className="text-xs text-brand-dark/70">Ride Safe. Ride Clean.</p>
+              <p className="text-base">Sree Khushi Tours & Travels</p>
+              <p className="text-xs text-brand-dark/70">Ride Safe. Travel Happy.</p>
             </div>
           </Link>
 
@@ -90,7 +90,7 @@ export default function Navbar() {
                 <FiPhone /> Call Now
               </a>
               <a
-                href="https://wa.me/917411606748?text=Hi%20Sri%20Ram%20Cabs,%20I%20want%20to%20book%20a%20cab."
+                href="https://wa.me/917411606748?text=Hi%20Sree%20Khushi%20Tours%20%26%20Travels,%20I%20want%20to%20book%20a%20cab."
                 className="btn-secondary w-full justify-center"
               >
                 WhatsApp

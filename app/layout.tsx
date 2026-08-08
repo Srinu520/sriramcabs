@@ -12,19 +12,20 @@ const font = Plus_Jakarta_Sans({
   display: "swap",
 });
 
-const siteTitle = "Sri Ram Cabs Bangalore | Safe, Clean & Trusted Taxi Service 24/7";
+const siteUrl = "https://sriramcabs.vercel.app";
+const siteTitle = "Sree Khushi Tours & Travels Bangalore | Cabs & Travel Service 24/7";
 const siteDescription =
-  "Book safe, clean and trusted cabs in Bangalore with Sri Ram Cabs. Local, airport and outstation taxi service across India. 24/7 support, experienced drivers and transparent pricing.";
+  "Book safe, clean and trusted cabs in Bangalore with Sree Khushi Tours & Travels. Local, airport, outstation and tour services with 24/7 support, experienced drivers and transparent pricing.";
 
 export const metadata: Metadata = {
   title: siteTitle,
   description: siteDescription,
-  metadataBase: new URL("https://your-domain.com"),
+  metadataBase: new URL(siteUrl),
   openGraph: {
     title: siteTitle,
     description: siteDescription,
-    url: "https://your-domain.com",
-    siteName: "Sri Ram Cabs",
+    url: siteUrl,
+    siteName: "Sree Khushi Tours & Travels",
     locale: "en_IN",
     type: "website",
   },
@@ -33,10 +34,10 @@ export const metadata: Metadata = {
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "TaxiService",
-  name: "Sri Ram Cabs",
-  url: "https://your-domain.com",
+  name: "Sree Khushi Tours & Travels",
+  url: siteUrl,
   telephone: "+91-7411606748",
-  email: "sriramcabs@gmail.com",
+  email: "sreekhushitours@gmail.com",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Bangalore",
