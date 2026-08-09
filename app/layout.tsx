@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 
 const structuredData = {
   "@context": "https://schema.org",
-  "@type": "TaxiService",
+  "@type": ["LocalBusiness", "TaxiService"],
   "@id": `${siteUrl}/#business`,
   name: "Sree Khushi Tours & Travels",
   url: siteUrl,
