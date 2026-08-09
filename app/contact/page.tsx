@@ -3,6 +3,7 @@ import Image from "next/image";
 import BookingForm from "@/components/BookingForm";
 import { MotionSection } from "@/components/MotionSection";
 import { FiClock, FiExternalLink, FiMail, FiMapPin, FiNavigation, FiPhone } from "react-icons/fi";
+import { FaWhatsapp } from "react-icons/fa";
 
 const googlePlaceId = "ChIJL7-PL-hzrjsRE8shNb_F1nk";
 const googleBusinessUrl = `https://www.google.com/maps/search/?api=1&query=Sree%20Khushi%20Tours%20%26%20Travels&query_place_id=${googlePlaceId}`;
@@ -22,33 +23,33 @@ export default function ContactPage() {
           <div className="rounded-3xl border border-brand-gold/50 bg-white/80 p-6 shadow-soft">
             <p className="text-sm font-semibold uppercase tracking-wide text-brand-dark/60">Contact</p>
             <h1 className="text-3xl font-bold text-brand-dark">Call, WhatsApp or fill the form</h1>
-            <p className="mt-2 text-sm text-brand-dark/70">
-              We respond quickly. For urgent trips, call us directly.
-            </p>
+            <p className="mt-2 text-sm text-brand-dark/70">We respond quickly. For urgent trips, call us directly.</p>
 
             <div className="mt-4 space-y-3 text-sm text-brand-dark/80">
               <div className="flex items-center gap-2">
                 <FiPhone className="text-brand-green" />
                 <div>
-                  <a href="tel:+917411606748" className="font-semibold text-brand-dark">
-                    +91 7411606748
-                  </a>
-                  <p>Call / WhatsApp</p>
+                  <a href="tel:+917411606748" className="font-semibold text-brand-dark">+91 7411606748</a>
+                  <p>Call</p>
                 </div>
               </div>
 
               <div className="flex items-center gap-2">
-                <FiPhone className="text-brand-green" />
-                <a href="tel:+918919602258" className="hover:text-brand-dark">
-                  +91 8919602258
-                </a>
+                <FaWhatsapp className="text-brand-green" />
+                <div>
+                  <a
+                    href="https://wa.me/918919602258?text=Hi%20Sree%20Khushi%20Tours%20%26%20Travels,%20I%20want%20to%20book%20a%20cab."
+                    className="font-semibold text-brand-dark"
+                  >
+                    +91 8919602258
+                  </a>
+                  <p>WhatsApp</p>
+                </div>
               </div>
 
               <div className="flex items-center gap-2">
                 <FiMail className="text-brand-green" />
-                <a href="mailto:sreekhushitours@gmail.com" className="hover:text-brand-dark">
-                  sreekhushitours@gmail.com
-                </a>
+                <a href="mailto:sreekhushitours@gmail.com" className="hover:text-brand-dark">sreekhushitours@gmail.com</a>
               </div>
 
               <div className="flex items-start gap-2">
@@ -69,24 +70,12 @@ export default function ContactPage() {
               <div className="grid gap-5 sm:grid-cols-[1fr_auto] sm:items-center">
                 <div>
                   <p className="text-base font-semibold text-brand-dark">Find us on Google</p>
-                  <p className="mt-1 text-sm text-brand-dark/70">
-                    Open our exact Google Business Profile or get turn-by-turn directions.
-                  </p>
+                  <p className="mt-1 text-sm text-brand-dark/70">Open our exact Google Business Profile or get turn-by-turn directions.</p>
                   <div className="mt-4 flex flex-wrap gap-3">
-                    <a
-                      href={googleBusinessUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn-primary"
-                    >
+                    <a href={googleBusinessUrl} target="_blank" rel="noopener noreferrer" className="btn-primary">
                       <FiExternalLink /> Open in Google Maps
                     </a>
-                    <a
-                      href={googleDirectionsUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn-secondary"
-                    >
+                    <a href={googleDirectionsUrl} target="_blank" rel="noopener noreferrer" className="btn-secondary">
                       <FiNavigation /> Get Directions
                     </a>
                   </div>
