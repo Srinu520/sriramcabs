@@ -27,8 +27,7 @@ export default function Footer() {
             </div>
           </div>
           <p className="text-sm leading-relaxed text-brand-dark/80">
-            24/7 cab and travel service in Bangalore for local, airport, outstation and pilgrimage travel.
-            Transparent pricing, polite drivers and clean cars every ride.
+            24/7 cab and taxi service in Sarjapura, Anekal and Bangalore for local rides, airport transfers, outstation travel and pilgrimage tours.
           </p>
         </div>
 
@@ -41,7 +40,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="space-y-2 text-sm text-brand-dark/80">
+        <div className="max-w-md space-y-2 text-sm text-brand-dark/80">
           <p className="text-base font-semibold text-brand-dark">Contact</p>
           <div className="flex items-center gap-2">
             <FiPhone className="text-brand-green" />
@@ -55,9 +54,9 @@ export default function Footer() {
             <FiMail className="text-brand-green" />
             <a href="mailto:sreekhushitours@gmail.com" className="hover:text-brand-dark">sreekhushitours@gmail.com</a>
           </div>
-          <div className="flex items-center gap-2">
-            <FiMapPin className="text-brand-green" />
-            <span>Sree Khushi Tours & Travels, Bangalore, Karnataka, India</span>
+          <div className="flex items-start gap-2">
+            <FiMapPin className="mt-0.5 shrink-0 text-brand-green" />
+            <span>Anekal Taluk, Near Ram Temple, 21 Krishna Reddy Building, Sompara Gate, Sarjapura, Bangalore, Karnataka 562125</span>
           </div>
           <div className="flex items-center gap-2">
             <FiClock className="text-brand-green" />
@@ -67,7 +66,7 @@ export default function Footer() {
       </div>
       <div className="border-t border-brand-gold/30 bg-brand-cream/70 py-4 text-center text-xs text-brand-dark/70">
         <p>© {year} Sree Khushi Tours & Travels. All rights reserved.</p>
-        <p className="mt-1">24/7 Cab & Travel Service in Bangalore | Local, Airport & Outstation Travel Across India.</p>
+        <p className="mt-1">Cab Service in Sarjapura & Anekal | Airport Taxi | Local & Outstation Cabs | Bangalore.</p>
       </div>
     </footer>
   );
