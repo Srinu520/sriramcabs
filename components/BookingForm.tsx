@@ -44,7 +44,7 @@ export default function BookingForm() {
 
   const whatsappLink = useMemo(() => {
     const data = submittedData ?? form;
-    const message = `Hi Sri Ram Cabs, I want to book a cab.\nName: ${data.name}\nMobile: ${data.mobile}\nTrip: ${data.tripType} (${data.tripOption})\nFrom: ${data.pickupLocation || "TBD"}\nTo: ${data.dropLocation || "TBD"}\nDate: ${data.pickupDate || "TBD"} ${data.pickupTime || ""}\nPassengers: ${data.passengers || "Not sure"}\nVehicle: ${data.vehicle}\nNotes: ${data.notes || "None"}`;
+    const message = `Hi Sree Khushi Tours & Travels, I want to book a cab.\nName: ${data.name}\nMobile: ${data.mobile}\nTrip: ${data.tripType} (${data.tripOption})\nFrom: ${data.pickupLocation || "TBD"}\nTo: ${data.dropLocation || "TBD"}\nDate: ${data.pickupDate || "TBD"} ${data.pickupTime || ""}\nPassengers: ${data.passengers || "Not sure"}\nVehicle: ${data.vehicle}\nNotes: ${data.notes || "None"}`;
     return `https://wa.me/917411606748?text=${encodeURIComponent(message)}`;
   }, [form, submittedData]);
 
