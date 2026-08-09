@@ -1,7 +1,15 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import CTAButtons from "@/components/CTAButtons";
 import { MotionSection } from "@/components/MotionSection";
 import { FiClock, FiHeart, FiMap, FiShield, FiSmile } from "react-icons/fi";
+
+export const metadata: Metadata = {
+  title: "About Sree Khushi Tours & Travels | Sarjapura & Anekal Cab Service",
+  description:
+    "Learn about Sree Khushi Tours & Travels, a 24/7 cab and travel service based in Sarjapura serving Anekal and Bangalore for local, airport, outstation and temple trips.",
+  alternates: { canonical: "/about" },
+};
 
 export default function AboutPage() {
   const stats = [
@@ -27,12 +35,11 @@ export default function AboutPage() {
           <MotionSection>
             <h1 className="text-3xl font-bold">About Sree Khushi Tours & Travels</h1>
             <p className="mt-3 text-lg text-white/85">
-              Based in Bangalore, Sree Khushi Tours & Travels is led by Rama Krishna with 5+ years of dedicated service.
-              We focus on safety, cleanliness and trust—serving families, corporate travellers, pilgrims and tourists.
+              Based in Sarjapura, Sree Khushi Tours & Travels is led by Rama Krishna with 5+ years of dedicated service.
+              We focus on safety, cleanliness and trust—serving families, corporate travellers, pilgrims and tourists across Anekal and Bangalore.
             </p>
             <p className="mt-2 text-sm text-white/75">
-              From airport transfers to outstation and temple tours, our team ensures punctual pick-ups, polite
-              drivers and spotless cars so every journey feels peaceful and reliable.
+              From airport transfers to outstation and temple tours, our team ensures punctual pick-ups, polite drivers and spotless cars so every journey feels peaceful and reliable.
             </p>
             <div className="mt-4">
               <CTAButtons variant="light" />
@@ -42,22 +49,13 @@ export default function AboutPage() {
             <div className="rounded-2xl border border-white/30 bg-white/10 p-6 backdrop-blur">
               <div className="grid gap-4 sm:grid-cols-2">
                 {stats.map((stat) => (
-                  <div
-                    key={stat.label}
-                    className="rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-sm text-white"
-                  >
+                  <div key={stat.label} className="rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-sm text-white">
                     <p className="text-white/70">{stat.label}</p>
                     <p className="text-lg font-semibold">{stat.value}</p>
                   </div>
                 ))}
               </div>
-              <Image
-                src="/hero-sedan1.png"
-                alt="Sree Khushi Tours & Travels fleet"
-                width={600}
-                height={320}
-                className="mx-auto mt-4 drop-shadow-2xl"
-              />
+              <Image src="/hero-sedan1.png" alt="Sree Khushi Tours & Travels fleet" width={600} height={320} className="mx-auto mt-4 drop-shadow-2xl" />
             </div>
           </MotionSection>
         </div>
@@ -66,17 +64,13 @@ export default function AboutPage() {
       <section className="mt-12 space-y-4">
         <MotionSection>
           <h2 className="text-2xl font-bold text-brand-dark">Our Values</h2>
-          <p className="text-sm text-brand-dark/70">
-            A dependable cab partner for families, corporate teams and devotional travellers.
-          </p>
+          <p className="text-sm text-brand-dark/70">A dependable cab partner for families, corporate teams and devotional travellers.</p>
         </MotionSection>
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {values.map((value, idx) => (
             <MotionSection key={value.title} delay={idx * 0.04}>
               <div className="card-hover h-full rounded-2xl border border-brand-gold/40 bg-white/80 p-5 shadow-soft">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-green/10 text-brand-green">
-                  {value.icon}
-                </div>
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-green/10 text-brand-green">{value.icon}</div>
                 <h3 className="mt-3 text-lg font-semibold text-brand-dark">{value.title}</h3>
                 <p className="mt-2 text-sm text-brand-dark/70">{value.desc}</p>
               </div>

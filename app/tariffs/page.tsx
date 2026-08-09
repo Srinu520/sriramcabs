@@ -5,9 +5,10 @@ import { FiPhone } from "react-icons/fi";
 import { FaRoute } from "react-icons/fa";
 
 export const metadata: Metadata = {
-  title: "Cab Tariff in Bangalore | Local & Outstation Taxi Rates – Sree Khushi Tours & Travels",
+  title: "Cab Tariff in Sarjapura & Anekal | Local & Outstation Taxi Rates",
   description:
-    "Check Sree Khushi Tours & Travels pricing in Bangalore: local city packages and outstation taxi rates with transparent charges.",
+    "Check cab rates in Sarjapura, Anekal and Bangalore. Local packages, airport taxi and outstation cab pricing from Sree Khushi Tours & Travels.",
+  alternates: { canonical: "/tariffs" },
 };
 
 const packages = [
@@ -24,8 +25,8 @@ export default function TariffsPage() {
           <div className="flex flex-wrap items-center justify-between gap-3">
             <div>
               <p className="text-sm font-semibold uppercase tracking-wide text-brand-dark/60">Tariffs</p>
-              <h1 className="text-3xl font-bold text-brand-dark">Transparent cab pricing in Bangalore</h1>
-              <p className="text-sm text-brand-dark/70">Clean cars, experienced drivers and clear pricing. No hidden charges.</p>
+              <h1 className="text-3xl font-bold text-brand-dark">Cab Rates in Sarjapura, Anekal & Bangalore</h1>
+              <p className="text-sm text-brand-dark/70">Transparent local and outstation taxi pricing with clean cars and experienced drivers.</p>
             </div>
             <CTAButtons />
           </div>
@@ -35,7 +36,7 @@ export default function TariffsPage() {
           <MotionSection>
             <div className="rounded-2xl border border-brand-gold/40 bg-brand-cream/80 p-6 shadow-soft">
               <div className="flex items-center justify-between">
-                <h3 className="text-xl font-semibold text-brand-dark">Local Packages – Bangalore City</h3>
+                <h3 className="text-xl font-semibold text-brand-dark">Local Cab Packages</h3>
                 <span className="badge">Includes fuel</span>
               </div>
               <div className="mt-4 grid gap-4 sm:grid-cols-3">
@@ -69,14 +70,14 @@ export default function TariffsPage() {
               <div className="absolute inset-0 bg-gradient-to-br from-brand-dark/85 to-brand-green/80" />
               <div className="relative space-y-3 p-6 text-white">
                 <div className="flex items-center gap-2 text-sm font-semibold"><FaRoute /> Outstation Tariff</div>
-                <p className="text-lg font-bold">All India outstation cabs from Bangalore</p>
+                <p className="text-lg font-bold">Outstation cabs from Sarjapura & Anekal</p>
                 <ul className="space-y-1 text-sm text-white/85">
                   <li>Minimum: 300 KM per day</li><li>Per KM: ₹13/km</li><li>Driver Bata: ₹400/day</li><li>Toll, parking and temporary permits extra</li>
                 </ul>
                 <p className="text-xs text-white/70">*Final pricing may vary based on route, season and vehicle type. Contact us for an exact quote.</p>
                 <div className="flex flex-wrap gap-3">
                   <a href="tel:+917411606748" className="btn-primary"><FiPhone /> Call for quote</a>
-                  <a href="https://wa.me/918919602258?text=Hi%20Sree%20Khushi%20Tours%20%26%20Travels,%20I%20need%20an%20outstation%20quote%20from%20Bangalore." className="btn-secondary bg-white/15 text-white">WhatsApp</a>
+                  <a href="https://wa.me/918919602258?text=Hi%20Sree%20Khushi%20Tours%20%26%20Travels,%20I%20need%20an%20outstation%20quote." className="btn-secondary bg-white/15 text-white">WhatsApp</a>
                 </div>
               </div>
             </div>

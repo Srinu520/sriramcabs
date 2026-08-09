@@ -8,11 +8,13 @@ import { FaWhatsapp } from "react-icons/fa";
 const googlePlaceId = "ChIJL7-PL-hzrjsRE8shNb_F1nk";
 const googleBusinessUrl = `https://www.google.com/maps/search/?api=1&query=Sree%20Khushi%20Tours%20%26%20Travels&query_place_id=${googlePlaceId}`;
 const googleDirectionsUrl = `https://www.google.com/maps/dir/?api=1&destination=Sree%20Khushi%20Tours%20%26%20Travels&destination_place_id=${googlePlaceId}`;
+const businessAddress = "Anekal Taluk, Near Ram Temple, 21 Krishna Reddy Building, Sompara Gate, Sarjapura, Bangalore, Karnataka 562125";
 
 export const metadata: Metadata = {
-  title: "Book a Cab in Bangalore | Contact Sree Khushi Tours & Travels",
+  title: "Cab Booking in Sarjapura & Anekal | Contact Sree Khushi Tours & Travels",
   description:
-    "Call, WhatsApp or submit the form to book a cab in Bangalore. Sree Khushi Tours & Travels offers local, airport, outstation and tour services 24/7.",
+    "Contact Sree Khushi Tours & Travels in Sarjapura for local cabs, airport taxi, outstation cabs and tours. Call 7411606748 or WhatsApp 8919602258.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {
@@ -22,8 +24,8 @@ export default function ContactPage() {
         <MotionSection>
           <div className="rounded-3xl border border-brand-gold/50 bg-white/80 p-6 shadow-soft">
             <p className="text-sm font-semibold uppercase tracking-wide text-brand-dark/60">Contact</p>
-            <h1 className="text-3xl font-bold text-brand-dark">Call, WhatsApp or fill the form</h1>
-            <p className="mt-2 text-sm text-brand-dark/70">We respond quickly. For urgent trips, call us directly.</p>
+            <h1 className="text-3xl font-bold text-brand-dark">Book a Cab in Sarjapura, Anekal & Bangalore</h1>
+            <p className="mt-2 text-sm text-brand-dark/70">24/7 local taxi, airport transfer, outstation cab and tour bookings.</p>
 
             <div className="mt-4 space-y-3 text-sm text-brand-dark/80">
               <div className="flex items-center gap-2">
@@ -37,10 +39,7 @@ export default function ContactPage() {
               <div className="flex items-center gap-2">
                 <FaWhatsapp className="text-brand-green" />
                 <div>
-                  <a
-                    href="https://wa.me/918919602258?text=Hi%20Sree%20Khushi%20Tours%20%26%20Travels,%20I%20want%20to%20book%20a%20cab."
-                    className="font-semibold text-brand-dark"
-                  >
+                  <a href="https://wa.me/918919602258?text=Hi%20Sree%20Khushi%20Tours%20%26%20Travels,%20I%20want%20to%20book%20a%20cab." className="font-semibold text-brand-dark">
                     +91 8919602258
                   </a>
                   <p>WhatsApp</p>
@@ -56,7 +55,8 @@ export default function ContactPage() {
                 <FiMapPin className="mt-0.5 shrink-0 text-brand-green" />
                 <div>
                   <p className="font-semibold text-brand-dark">Sree Khushi Tours & Travels</p>
-                  <p className="text-xs text-brand-dark/60">Official Google Business Profile location</p>
+                  <p className="mt-1 leading-relaxed">{businessAddress}</p>
+                  <p className="mt-1 text-xs text-brand-dark/60">Official Google Business Profile location</p>
                 </div>
               </div>
 
@@ -72,29 +72,13 @@ export default function ContactPage() {
                   <p className="text-base font-semibold text-brand-dark">Find us on Google</p>
                   <p className="mt-1 text-sm text-brand-dark/70">Open our exact Google Business Profile or get turn-by-turn directions.</p>
                   <div className="mt-4 flex flex-wrap gap-3">
-                    <a href={googleBusinessUrl} target="_blank" rel="noopener noreferrer" className="btn-primary">
-                      <FiExternalLink /> Open in Google Maps
-                    </a>
-                    <a href={googleDirectionsUrl} target="_blank" rel="noopener noreferrer" className="btn-secondary">
-                      <FiNavigation /> Get Directions
-                    </a>
+                    <a href={googleBusinessUrl} target="_blank" rel="noopener noreferrer" className="btn-primary"><FiExternalLink /> Open in Google Maps</a>
+                    <a href={googleDirectionsUrl} target="_blank" rel="noopener noreferrer" className="btn-secondary"><FiNavigation /> Get Directions</a>
                   </div>
                 </div>
 
-                <a
-                  href={googleBusinessUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mx-auto rounded-2xl border border-brand-gold/40 bg-white p-3 shadow-soft"
-                  aria-label="Open Sree Khushi Tours & Travels Google Business Profile"
-                >
-                  <Image
-                    src="/google-business-qr.svg"
-                    alt="Sree Khushi Tours & Travels Google Business Profile QR code"
-                    width={180}
-                    height={180}
-                    className="h-auto w-[180px]"
-                  />
+                <a href={googleBusinessUrl} target="_blank" rel="noopener noreferrer" className="mx-auto rounded-2xl border border-brand-gold/40 bg-white p-3 shadow-soft" aria-label="Open Sree Khushi Tours & Travels Google Business Profile">
+                  <Image src="/google-business-qr.svg" alt="Sree Khushi Tours & Travels Google Business Profile QR code" width={180} height={180} className="h-auto w-[180px]" />
                   <p className="mt-2 text-center text-xs font-semibold text-brand-dark">Scan to open Google profile</p>
                 </a>
               </div>
@@ -103,9 +87,7 @@ export default function ContactPage() {
         </MotionSection>
 
         <MotionSection delay={0.05}>
-          <div className="rounded-3xl border border-brand-gold/50 bg-white/80 p-6 shadow-soft">
-            <BookingForm />
-          </div>
+          <div className="rounded-3xl border border-brand-gold/50 bg-white/80 p-6 shadow-soft"><BookingForm /></div>
         </MotionSection>
       </section>
     </div>
