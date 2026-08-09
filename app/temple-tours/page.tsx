@@ -1,7 +1,15 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import CTAButtons from "@/components/CTAButtons";
 import { MotionSection } from "@/components/MotionSection";
 import { FiPhone } from "react-icons/fi";
+
+export const metadata: Metadata = {
+  title: "Temple Tour Cabs from Sarjapura & Bangalore | Sree Khushi Tours & Travels",
+  description:
+    "Book temple and pilgrimage tour cabs from Sarjapura, Anekal and Bangalore for Tirupati, Srisailam, Mantralayam, Dharmasthala, Kukke, Udupi, Gokarna and more.",
+  alternates: { canonical: "/temple-tours" },
+};
 
 const tours = [
   "Tirupati Balaji",
@@ -24,24 +32,15 @@ export default function TempleToursPage() {
         <div className="relative grid gap-6 p-8 text-white lg:grid-cols-[1.2fr_0.8fr]">
           <MotionSection>
             <p className="text-sm font-semibold uppercase tracking-wide text-white/70">Temple Tours</p>
-            <h1 className="text-3xl font-bold">Pilgrimage rides with devotion and care</h1>
+            <h1 className="text-3xl font-bold">Temple Tour Cabs from Sarjapura, Anekal & Bangalore</h1>
             <p className="mt-3 text-sm text-white/85">
-              Comfortable darshan trips with patient drivers, clean cars and punctual schedules. We help you plan
-              early morning starts, prasad pickups and flexible stopovers.
+              Comfortable darshan trips with patient drivers, clean cars and punctual schedules. We help you plan early morning starts, prasad pickups and flexible stopovers.
             </p>
-            <div className="mt-4">
-              <CTAButtons variant="light" />
-            </div>
+            <div className="mt-4"><CTAButtons variant="light" /></div>
           </MotionSection>
           <MotionSection delay={0.08}>
             <div className="rounded-2xl border border-white/20 bg-white/10 p-4 backdrop-blur">
-              <Image
-                src="/hero-sedan1.png"
-                alt="Temple tour cab"
-                width={700}
-                height={360}
-                className="mx-auto drop-shadow-2xl"
-              />
+              <Image src="/hero-sedan1.png" alt="Temple tour cab from Sree Khushi Tours & Travels" width={700} height={360} className="mx-auto drop-shadow-2xl" />
             </div>
           </MotionSection>
         </div>
@@ -53,9 +52,7 @@ export default function TempleToursPage() {
             <h2 className="text-2xl font-bold text-brand-dark">Popular temple routes from Bangalore</h2>
             <p className="text-sm text-brand-dark/70">Custom itineraries and stay options arranged on request.</p>
           </div>
-          <a href="tel:+917411606748" className="btn-secondary">
-            <FiPhone /> Plan a tour
-          </a>
+          <a href="tel:+917411606748" className="btn-secondary"><FiPhone /> Plan a tour</a>
         </div>
         <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {tours.map((tour, idx) => (
