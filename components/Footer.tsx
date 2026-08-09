@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FiClock, FiMail, FiMapPin, FiPhone } from "react-icons/fi";
+import { FaWhatsapp } from "react-icons/fa";
 
 const quickLinks = [
   { label: "Home", href: "/" },
@@ -19,9 +20,7 @@ export default function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col gap-12 px-4 py-12 md:flex-row md:justify-between">
         <div className="max-w-sm space-y-3">
           <div className="flex items-center gap-2">
-            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-brand-green to-brand-dark text-white shadow-glow">
-              SK
-            </span>
+            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-brand-green to-brand-dark text-white shadow-glow">SK</span>
             <div>
               <p className="text-lg font-semibold text-brand-dark">Sree Khushi Tours & Travels</p>
               <p className="text-sm text-brand-dark/70">Safe, clean & trusted journeys</p>
@@ -37,9 +36,7 @@ export default function Footer() {
           <p className="mb-3 text-base font-semibold text-brand-dark">Quick Links</p>
           <div className="grid grid-cols-2 gap-2 text-sm text-brand-dark/80">
             {quickLinks.map((item) => (
-              <Link key={item.href} href={item.href} className="hover:text-brand-dark">
-                {item.label}
-              </Link>
+              <Link key={item.href} href={item.href} className="hover:text-brand-dark">{item.label}</Link>
             ))}
           </div>
         </div>
@@ -48,21 +45,15 @@ export default function Footer() {
           <p className="text-base font-semibold text-brand-dark">Contact</p>
           <div className="flex items-center gap-2">
             <FiPhone className="text-brand-green" />
-            <a href="tel:+917411606748" className="hover:text-brand-dark">
-              +91 7411606748
-            </a>
+            <a href="tel:+917411606748" className="hover:text-brand-dark">Call: +91 7411606748</a>
           </div>
           <div className="flex items-center gap-2">
-            <FiPhone className="text-brand-green" />
-            <a href="tel:+918919602258" className="hover:text-brand-dark">
-              +91 8919602258
-            </a>
+            <FaWhatsapp className="text-brand-green" />
+            <a href="https://wa.me/918919602258" className="hover:text-brand-dark">WhatsApp: +91 8919602258</a>
           </div>
           <div className="flex items-center gap-2">
             <FiMail className="text-brand-green" />
-            <a href="mailto:sreekhushitours@gmail.com" className="hover:text-brand-dark">
-              sreekhushitours@gmail.com
-            </a>
+            <a href="mailto:sreekhushitours@gmail.com" className="hover:text-brand-dark">sreekhushitours@gmail.com</a>
           </div>
           <div className="flex items-center gap-2">
             <FiMapPin className="text-brand-green" />
@@ -76,9 +67,7 @@ export default function Footer() {
       </div>
       <div className="border-t border-brand-gold/30 bg-brand-cream/70 py-4 text-center text-xs text-brand-dark/70">
         <p>© {year} Sree Khushi Tours & Travels. All rights reserved.</p>
-        <p className="mt-1">
-          24/7 Cab & Travel Service in Bangalore | Local, Airport & Outstation Travel Across India.
-        </p>
+        <p className="mt-1">24/7 Cab & Travel Service in Bangalore | Local, Airport & Outstation Travel Across India.</p>
       </div>
     </footer>
   );
