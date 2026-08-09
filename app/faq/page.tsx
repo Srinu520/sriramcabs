@@ -1,6 +1,14 @@
+import type { Metadata } from "next";
 import FaqAccordion from "@/components/FaqAccordion";
 import { MotionSection } from "@/components/MotionSection";
 import CTAButtons from "@/components/CTAButtons";
+
+export const metadata: Metadata = {
+  title: "Cab Service FAQ | Sarjapura, Anekal & Bangalore",
+  description:
+    "Frequently asked questions about Sree Khushi Tours & Travels cab services in Sarjapura, Anekal and Bangalore, including local, airport, outstation and temple trips.",
+  alternates: { canonical: "/faq" },
+};
 
 const faqs = [
   {
@@ -20,7 +28,7 @@ const faqs = [
   {
     question: "Can I get a temple tour itinerary?",
     answer:
-      "Yes, we customise temple and pilgrimage tours with early morning pick-ups, dharshan timing alignment and flexible stops.",
+      "Yes, we customise temple and pilgrimage tours with early morning pick-ups, darshan timing alignment and flexible stops.",
   },
   {
     question: "Do you sanitize cars?",
@@ -39,16 +47,10 @@ export default function FAQPage() {
       <MotionSection>
         <div className="rounded-3xl border border-brand-gold/40 bg-white/80 p-8 shadow-soft">
           <p className="text-sm font-semibold uppercase tracking-wide text-brand-dark/60">FAQ</p>
-          <h1 className="text-3xl font-bold text-brand-dark">Frequently asked questions</h1>
-          <p className="mt-2 text-sm text-brand-dark/70">
-            Need more help? Call or WhatsApp us anytime. We respond quickly.
-          </p>
-          <div className="mt-4">
-            <FaqAccordion items={faqs} />
-          </div>
-          <div className="mt-6">
-            <CTAButtons primaryLabel="Talk to us" />
-          </div>
+          <h1 className="text-3xl font-bold text-brand-dark">Cab Service FAQs for Sarjapura, Anekal & Bangalore</h1>
+          <p className="mt-2 text-sm text-brand-dark/70">Need more help? Call or WhatsApp us anytime. We respond quickly.</p>
+          <div className="mt-4"><FaqAccordion items={faqs} /></div>
+          <div className="mt-6"><CTAButtons primaryLabel="Talk to us" /></div>
         </div>
       </MotionSection>
     </div>
