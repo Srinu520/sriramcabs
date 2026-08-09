@@ -13,9 +13,11 @@ const font = Plus_Jakarta_Sans({
 });
 
 const siteUrl = "https://sriramcabs.vercel.app";
-const siteTitle = "Sree Khushi Tours & Travels Bangalore | Cabs & Travel Service 24/7";
+const googlePlaceId = "ChIJL7-PL-hzrjsRE8shNb_F1nk";
+const googleBusinessUrl = `https://www.google.com/maps/search/?api=1&query=Sree%20Khushi%20Tours%20%26%20Travels&query_place_id=${googlePlaceId}`;
+const siteTitle = "Cab Service in Sarjapura, Anekal & Bangalore | Sree Khushi Tours & Travels";
 const siteDescription =
-  "Book safe, clean and trusted cabs in Bangalore with Sree Khushi Tours & Travels. Local, airport, outstation and tour services with 24/7 support, experienced drivers and transparent pricing.";
+  "24/7 cab service in Sarjapura, Sompara Gate, Anekal and Bangalore. Airport taxi, local rides, outstation cabs, tempo traveller and temple tours.";
 
 export const metadata: Metadata = {
   title: siteTitle,
@@ -34,20 +36,44 @@ export const metadata: Metadata = {
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "TaxiService",
+  "@id": `${siteUrl}/#business`,
   name: "Sree Khushi Tours & Travels",
   url: siteUrl,
+  description: siteDescription,
   telephone: "+91-7411606748",
   email: "sreekhushitours@gmail.com",
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Bangalore",
+    streetAddress: "Anekal Taluk, Near Ram Temple, 21 Krishna Reddy Building, Sompara Gate",
+    addressLocality: "Sarjapura",
     addressRegion: "Karnataka",
+    postalCode: "562125",
     addressCountry: "IN",
   },
-  areaServed: {
-    "@type": "City",
-    name: "Bangalore",
-  },
+  areaServed: [
+    { "@type": "Place", name: "Sarjapura" },
+    { "@type": "Place", name: "Sompara Gate" },
+    { "@type": "Place", name: "Sompura Gate" },
+    { "@type": "Place", name: "Anekal" },
+    { "@type": "City", name: "Bangalore" },
+  ],
+  hasMap: googleBusinessUrl,
+  sameAs: [googleBusinessUrl],
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      contactType: "customer service",
+      telephone: "+91-7411606748",
+      availableLanguage: ["English", "Kannada", "Telugu", "Hindi"],
+    },
+    {
+      "@type": "ContactPoint",
+      contactType: "WhatsApp",
+      telephone: "+91-8919602258",
+      url: "https://wa.me/918919602258",
+      availableLanguage: ["English", "Kannada", "Telugu", "Hindi"],
+    },
+  ],
   priceRange: "₹₹",
   openingHoursSpecification: [
     {
