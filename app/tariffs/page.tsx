@@ -5,9 +5,9 @@ import { FiPhone } from "react-icons/fi";
 import { FaRoute } from "react-icons/fa";
 
 export const metadata: Metadata = {
-  title: "Cab Tariff in Bangalore | Local & Outstation Taxi Rates – Sri Ram Cabs",
+  title: "Cab Tariff in Bangalore | Local & Outstation Taxi Rates – Sree Khushi Tours & Travels",
   description:
-    "Check Sri Ram Cabs pricing in Bangalore: local city packages and outstation taxi rates with transparent charges.",
+    "Check Sree Khushi Tours & Travels pricing in Bangalore: local city packages and outstation taxi rates with transparent charges.",
 };
 
 const packages = [
@@ -94,7 +94,7 @@ export default function TariffsPage() {
                     <FiPhone /> Call for quote
                   </a>
                   <a
-                    href="https://wa.me/917411606748?text=Hi%20Sri%20Ram%20Cabs,%20I%20need%20an%20outstation%20quote%20from%20Bangalore."
+                    href="https://wa.me/917411606748?text=Hi%20Sree%20Khushi%20Tours%20%26%20Travels,%20I%20need%20an%20outstation%20quote%20from%20Bangalore."
                     className="btn-secondary bg-white/15 text-white"
                   >
                     WhatsApp
@@ -122,7 +122,7 @@ export default function TariffsPage() {
                 <FiPhone /> Call Now
               </a>
               <a
-                href="https://wa.me/917411606748?text=Hi%20Sri%20Ram%20Cabs,%20share%20tariff%20details%20please."
+                href="https://wa.me/917411606748?text=Hi%20Sree%20Khushi%20Tours%20%26%20Travels,%20share%20tariff%20details%20please."
                 className="btn-secondary bg-white/15 text-white"
               >
                 WhatsApp
