@@ -12,7 +12,7 @@ const font = Plus_Jakarta_Sans({
   display: "swap",
 });
 
-const siteUrl = "https://sriramcabs.vercel.app";
+const siteUrl = "https://sreekhushitravels.in";
 const googlePlaceId = "ChIJL7-PL-hzrjsRE8shNb_F1nk";
 const googleBusinessUrl = `https://www.google.com/maps/search/?api=1&query=Sree%20Khushi%20Tours%20%26%20Travels&query_place_id=${googlePlaceId}`;
 const siteTitle = "Cab Service in Sarjapura, Anekal & Bangalore | Sree Khushi Tours & Travels";
