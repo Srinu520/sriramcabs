@@ -45,7 +45,7 @@ export default function BookingForm() {
   const whatsappLink = useMemo(() => {
     const data = submittedData ?? form;
     const message = `Hi Sree Khushi Tours & Travels, I want to book a cab.\nName: ${data.name}\nMobile: ${data.mobile}\nTrip: ${data.tripType} (${data.tripOption})\nFrom: ${data.pickupLocation || "TBD"}\nTo: ${data.dropLocation || "TBD"}\nDate: ${data.pickupDate || "TBD"} ${data.pickupTime || ""}\nPassengers: ${data.passengers || "Not sure"}\nVehicle: ${data.vehicle}\nNotes: ${data.notes || "None"}`;
-    return `https://wa.me/917411606748?text=${encodeURIComponent(message)}`;
+    return `https://wa.me/918919602258?text=${encodeURIComponent(message)}`;
   }, [form, submittedData]);
 
   function handleChange<T extends keyof FormData>(field: T, value: FormData[T]) {
@@ -121,155 +121,66 @@ export default function BookingForm() {
       <form className="grid grid-cols-1 gap-4 md:grid-cols-2" onSubmit={handleSubmit}>
         <div className="space-y-1">
           <label className="text-sm font-medium text-brand-dark">Name *</label>
-          <input
-            type="text"
-            value={form.name}
-            onChange={(e) => handleChange("name", e.target.value)}
-            className="w-full rounded-xl border border-brand-gold/50 bg-white/80 px-4 py-3 text-sm text-brand-dark shadow-inner transition focus:border-brand-green focus:outline-none"
-            placeholder="Your full name"
-          />
+          <input type="text" value={form.name} onChange={(e) => handleChange("name", e.target.value)} className="w-full rounded-xl border border-brand-gold/50 bg-white/80 px-4 py-3 text-sm text-brand-dark shadow-inner transition focus:border-brand-green focus:outline-none" placeholder="Your full name" />
           {errors.name && errorText(errors.name)}
         </div>
         <div className="space-y-1">
           <label className="text-sm font-medium text-brand-dark">Mobile Number *</label>
-          <input
-            type="tel"
-            value={form.mobile}
-            onChange={(e) => handleChange("mobile", e.target.value)}
-            className="w-full rounded-xl border border-brand-gold/50 bg-white/80 px-4 py-3 text-sm text-brand-dark shadow-inner transition focus:border-brand-green focus:outline-none"
-            placeholder="+91 7411606748"
-          />
+          <input type="tel" value={form.mobile} onChange={(e) => handleChange("mobile", e.target.value)} className="w-full rounded-xl border border-brand-gold/50 bg-white/80 px-4 py-3 text-sm text-brand-dark shadow-inner transition focus:border-brand-green focus:outline-none" placeholder="+91 7411606748" />
           {errors.mobile && errorText(errors.mobile)}
         </div>
         <div className="space-y-1">
           <label className="text-sm font-medium text-brand-dark">Email</label>
-          <input
-            type="email"
-            value={form.email}
-            onChange={(e) => handleChange("email", e.target.value)}
-            className="w-full rounded-xl border border-brand-gold/50 bg-white/80 px-4 py-3 text-sm text-brand-dark shadow-inner transition focus:border-brand-green focus:outline-none"
-            placeholder="you@example.com"
-          />
+          <input type="email" value={form.email} onChange={(e) => handleChange("email", e.target.value)} className="w-full rounded-xl border border-brand-gold/50 bg-white/80 px-4 py-3 text-sm text-brand-dark shadow-inner transition focus:border-brand-green focus:outline-none" placeholder="you@example.com" />
         </div>
         <div className="space-y-1">
           <label className="text-sm font-medium text-brand-dark">Trip Type *</label>
-          <select
-            value={form.tripType}
-            onChange={(e) => handleChange("tripType", e.target.value)}
-            className="w-full rounded-xl border border-brand-gold/50 bg-white/80 px-4 py-3 text-sm text-brand-dark shadow-inner transition focus:border-brand-green focus:outline-none"
-          >
-            <option>Local</option>
-            <option>Outstation</option>
-            <option>Airport</option>
-            <option>Package</option>
+          <select value={form.tripType} onChange={(e) => handleChange("tripType", e.target.value)} className="w-full rounded-xl border border-brand-gold/50 bg-white/80 px-4 py-3 text-sm text-brand-dark shadow-inner transition focus:border-brand-green focus:outline-none">
+            <option>Local</option><option>Outstation</option><option>Airport</option><option>Package</option>
           </select>
           {errors.tripType && errorText(errors.tripType)}
         </div>
         <div className="space-y-1 md:col-span-2">
           <label className="text-sm font-medium text-brand-dark">Pick-up Location *</label>
-          <input
-            type="text"
-            value={form.pickupLocation}
-            onChange={(e) => handleChange("pickupLocation", e.target.value)}
-            className="w-full rounded-xl border border-brand-gold/50 bg-white/80 px-4 py-3 text-sm text-brand-dark shadow-inner transition focus:border-brand-green focus:outline-none"
-            placeholder="Your address or landmark"
-          />
+          <input type="text" value={form.pickupLocation} onChange={(e) => handleChange("pickupLocation", e.target.value)} className="w-full rounded-xl border border-brand-gold/50 bg-white/80 px-4 py-3 text-sm text-brand-dark shadow-inner transition focus:border-brand-green focus:outline-none" placeholder="Your address or landmark" />
           {errors.pickupLocation && errorText(errors.pickupLocation)}
         </div>
         <div className="space-y-1 md:col-span-2">
           <label className="text-sm font-medium text-brand-dark">Drop Location</label>
-          <input
-            type="text"
-            value={form.dropLocation}
-            onChange={(e) => handleChange("dropLocation", e.target.value)}
-            className="w-full rounded-xl border border-brand-gold/50 bg-white/80 px-4 py-3 text-sm text-brand-dark shadow-inner transition focus:border-brand-green focus:outline-none"
-            placeholder="Destination or route"
-          />
+          <input type="text" value={form.dropLocation} onChange={(e) => handleChange("dropLocation", e.target.value)} className="w-full rounded-xl border border-brand-gold/50 bg-white/80 px-4 py-3 text-sm text-brand-dark shadow-inner transition focus:border-brand-green focus:outline-none" placeholder="Destination or route" />
         </div>
         <div className="space-y-1">
           <label className="text-sm font-medium text-brand-dark">Pick-up Date *</label>
-          <input
-            type="date"
-            value={form.pickupDate}
-            onChange={(e) => handleChange("pickupDate", e.target.value)}
-            className="w-full rounded-xl border border-brand-gold/50 bg-white/80 px-4 py-3 text-sm text-brand-dark shadow-inner transition focus:border-brand-green focus:outline-none"
-          />
+          <input type="date" value={form.pickupDate} onChange={(e) => handleChange("pickupDate", e.target.value)} className="w-full rounded-xl border border-brand-gold/50 bg-white/80 px-4 py-3 text-sm text-brand-dark shadow-inner transition focus:border-brand-green focus:outline-none" />
           {errors.pickupDate && errorText(errors.pickupDate)}
         </div>
         <div className="space-y-1">
           <label className="text-sm font-medium text-brand-dark">Pick-up Time *</label>
-          <input
-            type="time"
-            value={form.pickupTime}
-            onChange={(e) => handleChange("pickupTime", e.target.value)}
-            className="w-full rounded-xl border border-brand-gold/50 bg-white/80 px-4 py-3 text-sm text-brand-dark shadow-inner transition focus:border-brand-green focus:outline-none"
-          />
+          <input type="time" value={form.pickupTime} onChange={(e) => handleChange("pickupTime", e.target.value)} className="w-full rounded-xl border border-brand-gold/50 bg-white/80 px-4 py-3 text-sm text-brand-dark shadow-inner transition focus:border-brand-green focus:outline-none" />
           {errors.pickupTime && errorText(errors.pickupTime)}
         </div>
         <div className="space-y-1">
           <label className="text-sm font-medium text-brand-dark">Trip</label>
-          <select
-            value={form.tripOption}
-            onChange={(e) => handleChange("tripOption", e.target.value)}
-            className="w-full rounded-xl border border-brand-gold/50 bg-white/80 px-4 py-3 text-sm text-brand-dark shadow-inner transition focus:border-brand-green focus:outline-none"
-          >
-            <option>One-way</option>
-            <option>Round trip</option>
-          </select>
+          <select value={form.tripOption} onChange={(e) => handleChange("tripOption", e.target.value)} className="w-full rounded-xl border border-brand-gold/50 bg-white/80 px-4 py-3 text-sm text-brand-dark shadow-inner transition focus:border-brand-green focus:outline-none"><option>One-way</option><option>Round trip</option></select>
         </div>
         <div className="space-y-1">
           <label className="text-sm font-medium text-brand-dark">Vehicle Preference</label>
-          <select
-            value={form.vehicle}
-            onChange={(e) => handleChange("vehicle", e.target.value)}
-            className="w-full rounded-xl border border-brand-gold/50 bg-white/80 px-4 py-3 text-sm text-brand-dark shadow-inner transition focus:border-brand-green focus:outline-none"
-          >
-            <option>Hatchback</option>
-            <option>Sedan</option>
-            <option>SUV</option>
-            <option>Tempo Traveller</option>
-            <option>Not sure</option>
-          </select>
+          <select value={form.vehicle} onChange={(e) => handleChange("vehicle", e.target.value)} className="w-full rounded-xl border border-brand-gold/50 bg-white/80 px-4 py-3 text-sm text-brand-dark shadow-inner transition focus:border-brand-green focus:outline-none"><option>Hatchback</option><option>Sedan</option><option>SUV</option><option>Tempo Traveller</option><option>Not sure</option></select>
         </div>
         <div className="space-y-1">
           <label className="text-sm font-medium text-brand-dark">Number of Passengers</label>
-          <input
-            type="number"
-            min="1"
-            value={form.passengers}
-            onChange={(e) => handleChange("passengers", e.target.value)}
-            className="w-full rounded-xl border border-brand-gold/50 bg-white/80 px-4 py-3 text-sm text-brand-dark shadow-inner transition focus:border-brand-green focus:outline-none"
-            placeholder="e.g. 4"
-          />
+          <input type="number" min="1" value={form.passengers} onChange={(e) => handleChange("passengers", e.target.value)} className="w-full rounded-xl border border-brand-gold/50 bg-white/80 px-4 py-3 text-sm text-brand-dark shadow-inner transition focus:border-brand-green focus:outline-none" placeholder="e.g. 4" />
         </div>
         <div className="space-y-1 md:col-span-2">
           <label className="text-sm font-medium text-brand-dark">Special Notes</label>
-          <textarea
-            value={form.notes}
-            onChange={(e) => handleChange("notes", e.target.value)}
-            rows={3}
-            className="w-full rounded-xl border border-brand-gold/50 bg-white/80 px-4 py-3 text-sm text-brand-dark shadow-inner transition focus:border-brand-green focus:outline-none"
-            placeholder="Luggage details, elderly, kids, temple timings, etc."
-          />
+          <textarea value={form.notes} onChange={(e) => handleChange("notes", e.target.value)} rows={3} className="w-full rounded-xl border border-brand-gold/50 bg-white/80 px-4 py-3 text-sm text-brand-dark shadow-inner transition focus:border-brand-green focus:outline-none" placeholder="Luggage details, elderly, kids, temple timings, etc." />
         </div>
         <div className="md:col-span-2 flex flex-wrap items-center gap-3">
-          <button
-            type="submit"
-            disabled={submitting}
-            className="btn-primary disabled:opacity-70"
-          >
-            <FiSend />
-            {submitting ? "Booking..." : "Send Booking Request"}
-          </button>
+          <button type="submit" disabled={submitting} className="btn-primary disabled:opacity-70"><FiSend />{submitting ? "Booking..." : "Send Booking Request"}</button>
           {success && (
-            <a href={whatsappLink} target="_blank" rel="noreferrer" className="btn-secondary">
-              <FaWhatsapp />
-              Confirm on WhatsApp
-            </a>
+            <a href={whatsappLink} target="_blank" rel="noreferrer" className="btn-secondary"><FaWhatsapp />Confirm on WhatsApp</a>
           )}
-          <p className="text-xs text-brand-dark/60">
-            We respond quickly. For urgent trips, please call +91 7411606748 or WhatsApp us.
-          </p>
+          <p className="text-xs text-brand-dark/60">Call: +91 7411606748 • WhatsApp: +91 8919602258</p>
         </div>
       </form>
     </div>
@@ -277,10 +188,5 @@ export default function BookingForm() {
 }
 
 function errorText(message: string) {
-  return (
-    <p className="flex items-center gap-1 text-xs text-red-600">
-      <FiAlertCircle />
-      {message}
-    </p>
-  );
+  return <p className="flex items-center gap-1 text-xs text-red-600"><FiAlertCircle />{message}</p>;
 }
