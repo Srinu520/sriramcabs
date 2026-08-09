@@ -5,51 +5,52 @@ import { FiBriefcase, FiClock, FiMapPin, FiSmile, FiStar } from "react-icons/fi"
 import { FaCarAlt, FaRoute } from "react-icons/fa";
 
 export const metadata: Metadata = {
-  title: "Cab Services in Bangalore – Local, Airport & Outstation | Sri Ram Cabs",
+  title: "Cab Service in Sarjapura & Anekal | Airport, Local & Outstation Cabs",
   description:
-    "Book local, airport and outstation cab services in Bangalore with Sri Ram Cabs. Clean cars, polite drivers and transparent pricing.",
+    "Book 24/7 cab service in Sarjapura, Sompara Gate, Anekal and Bangalore. Local taxi, airport cabs, outstation cars, tempo traveller, corporate and temple tours.",
+  alternates: { canonical: "/services" },
 };
 
 const services = [
   {
-    title: "Local City Rides",
-    desc: "Daily commute, shopping, school runs and family visits with trusted chauffeurs.",
+    title: "Local Cab Service in Sarjapura & Anekal",
+    desc: "Local taxi rides around Sarjapura, Sompara Gate, Anekal and nearby Bangalore areas for daily commute, shopping and family travel.",
     ideal: ["Families", "Students", "IT employees"],
     icon: <FiMapPin />,
   },
   {
-    title: "Airport Transfers",
-    desc: "Kempegowda International Airport pick-up & drop with buffer time and flight tracking.",
+    title: "Airport Taxi from Sarjapura",
+    desc: "Kempegowda International Airport pick-up and drop from Sarjapura and Anekal with buffer time and punctual drivers.",
     ideal: ["Early morning flights", "Business trips"],
     icon: <FiClock />,
   },
   {
-    title: "Outstation Cabs (All India)",
-    desc: "Round trips and one-way drops from Bangalore to anywhere in India.",
+    title: "Outstation Cabs from Sarjapura",
+    desc: "One-way and round-trip outstation cabs from Sarjapura, Anekal and Bangalore to destinations across India.",
     ideal: ["Families", "Tourists", "Corporate travellers"],
     icon: <FaRoute />,
   },
   {
-    title: "Corporate & Monthly Contracts",
-    desc: "Dedicated fleet support for teams, events, shuttles and monthly billing.",
+    title: "Corporate & Monthly Cab Contracts",
+    desc: "Dedicated fleet support for offices, employee transport, team travel, events and monthly cab requirements.",
     ideal: ["Companies", "Teams", "VIP movement"],
     icon: <FiBriefcase />,
   },
   {
     title: "Wedding / Event Transport",
-    desc: "Coordinated guest logistics with clean cars and polite chauffeurs.",
+    desc: "Coordinated guest transportation with hatchbacks, sedans, SUVs and tempo travellers for functions and events.",
     ideal: ["Weddings", "Functions", "Receptions"],
     icon: <FaCarAlt />,
   },
   {
     title: "Temple & Pilgrimage Tours",
-    desc: "Devotional trips with patient drivers, stop flexibility and clean cars.",
+    desc: "Temple tour cabs from Sarjapura and Bangalore with patient drivers, flexible stops and clean vehicles.",
     ideal: ["Pilgrims", "Family elders"],
     icon: <FiStar />,
   },
   {
     title: "Holiday / Tour Packages",
-    desc: "Customised itineraries for hill stations, beaches and heritage circuits.",
+    desc: "Custom cab packages for hill stations, beaches, heritage circuits and family holidays from Sarjapura and Bangalore.",
     ideal: ["Friends", "Families", "Tourists"],
     icon: <FiSmile />,
   },
@@ -63,9 +64,9 @@ export default function ServicesPage() {
           <div className="flex flex-wrap items-center justify-between gap-3">
             <div>
               <p className="text-sm font-semibold uppercase tracking-wide text-brand-dark/60">Services</p>
-              <h1 className="text-3xl font-bold text-brand-dark">Everything you need for travel</h1>
+              <h1 className="text-3xl font-bold text-brand-dark">Cab & Taxi Services in Sarjapura, Anekal and Bangalore</h1>
               <p className="text-sm text-brand-dark/70">
-                Safe, clean and punctual cabs for families, corporate teams, tourists and pilgrims.
+                Sree Khushi Tours & Travels provides 24/7 local cabs, airport taxis, outstation cars, tempo travellers and tour services from Sarjapura and Anekal.
               </p>
             </div>
             <CTAButtons />
@@ -82,16 +83,14 @@ export default function ServicesPage() {
                 <p className="mt-2 text-sm text-brand-dark/70">{service.desc}</p>
                 <div className="mt-3 text-xs text-brand-dark/70">
                   <p className="font-semibold text-brand-dark">Ideal for:</p>
-                  <ul className="mt-1 list-disc pl-4 space-y-0.5">
+                  <ul className="mt-1 list-disc space-y-0.5 pl-4">
                     {service.ideal.map((item) => (
                       <li key={item}>{item}</li>
                     ))}
                   </ul>
                 </div>
                 <div className="mt-3">
-                  <a href="/contact" className="text-sm font-semibold text-brand-green">
-                    Book this service →
-                  </a>
+                  <a href="/contact" className="text-sm font-semibold text-brand-green">Book this service →</a>
                 </div>
               </div>
             </MotionSection>
