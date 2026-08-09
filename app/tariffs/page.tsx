@@ -25,9 +25,7 @@ export default function TariffsPage() {
             <div>
               <p className="text-sm font-semibold uppercase tracking-wide text-brand-dark/60">Tariffs</p>
               <h1 className="text-3xl font-bold text-brand-dark">Transparent cab pricing in Bangalore</h1>
-              <p className="text-sm text-brand-dark/70">
-                Clean cars, experienced drivers and clear pricing. No hidden charges.
-              </p>
+              <p className="text-sm text-brand-dark/70">Clean cars, experienced drivers and clear pricing. No hidden charges.</p>
             </div>
             <CTAButtons />
           </div>
@@ -52,18 +50,12 @@ export default function TariffsPage() {
               <div className="mt-5 overflow-hidden rounded-2xl border border-brand-gold/50 bg-white/80">
                 <table className="w-full text-sm text-brand-dark/80">
                   <thead className="bg-brand-cream/80 text-left text-xs uppercase tracking-wide text-brand-dark">
-                    <tr>
-                      <th className="px-4 py-3">Package</th>
-                      <th className="px-4 py-3">Price</th>
-                      <th className="px-4 py-3">Extra Km</th>
-                    </tr>
+                    <tr><th className="px-4 py-3">Package</th><th className="px-4 py-3">Price</th><th className="px-4 py-3">Extra Km</th></tr>
                   </thead>
                   <tbody>
                     {packages.map((pkg) => (
                       <tr key={pkg.package} className="border-t border-brand-gold/30">
-                        <td className="px-4 py-3">{pkg.package}</td>
-                        <td className="px-4 py-3 font-semibold">{pkg.price}</td>
-                        <td className="px-4 py-3">{pkg.extra}</td>
+                        <td className="px-4 py-3">{pkg.package}</td><td className="px-4 py-3 font-semibold">{pkg.price}</td><td className="px-4 py-3">{pkg.extra}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -76,29 +68,15 @@ export default function TariffsPage() {
             <div className="relative overflow-hidden rounded-2xl border border-brand-gold/50 bg-[url('/bg-city.png')] bg-cover bg-center shadow-glow">
               <div className="absolute inset-0 bg-gradient-to-br from-brand-dark/85 to-brand-green/80" />
               <div className="relative space-y-3 p-6 text-white">
-                <div className="flex items-center gap-2 text-sm font-semibold">
-                  <FaRoute /> Outstation Tariff
-                </div>
+                <div className="flex items-center gap-2 text-sm font-semibold"><FaRoute /> Outstation Tariff</div>
                 <p className="text-lg font-bold">All India outstation cabs from Bangalore</p>
                 <ul className="space-y-1 text-sm text-white/85">
-                  <li>Minimum: 300 KM per day</li>
-                  <li>Per KM: ₹13/km</li>
-                  <li>Driver Bata: ₹400/day</li>
-                  <li>Toll, parking and temporary permits extra</li>
+                  <li>Minimum: 300 KM per day</li><li>Per KM: ₹13/km</li><li>Driver Bata: ₹400/day</li><li>Toll, parking and temporary permits extra</li>
                 </ul>
-                <p className="text-xs text-white/70">
-                  *Final pricing may vary based on route, season and vehicle type. Contact us for an exact quote.
-                </p>
+                <p className="text-xs text-white/70">*Final pricing may vary based on route, season and vehicle type. Contact us for an exact quote.</p>
                 <div className="flex flex-wrap gap-3">
-                  <a href="tel:+917411606748" className="btn-primary">
-                    <FiPhone /> Call for quote
-                  </a>
-                  <a
-                    href="https://wa.me/917411606748?text=Hi%20Sree%20Khushi%20Tours%20%26%20Travels,%20I%20need%20an%20outstation%20quote%20from%20Bangalore."
-                    className="btn-secondary bg-white/15 text-white"
-                  >
-                    WhatsApp
-                  </a>
+                  <a href="tel:+917411606748" className="btn-primary"><FiPhone /> Call for quote</a>
+                  <a href="https://wa.me/918919602258?text=Hi%20Sree%20Khushi%20Tours%20%26%20Travels,%20I%20need%20an%20outstation%20quote%20from%20Bangalore." className="btn-secondary bg-white/15 text-white">WhatsApp</a>
                 </div>
               </div>
             </div>
@@ -113,23 +91,12 @@ export default function TariffsPage() {
             <div>
               <p className="text-sm uppercase tracking-wide text-white/70">Ready to ride?</p>
               <h2 className="text-2xl font-bold">Call, WhatsApp or book online</h2>
-              <p className="text-sm text-white/80">
-                Clean cars, polite drivers and transparent pricing. We respond quickly.
-              </p>
+              <p className="text-sm text-white/80">Clean cars, polite drivers and transparent pricing. We respond quickly.</p>
             </div>
             <div className="flex flex-wrap items-center gap-3">
-              <a href="tel:+917411606748" className="btn-primary">
-                <FiPhone /> Call Now
-              </a>
-              <a
-                href="https://wa.me/917411606748?text=Hi%20Sree%20Khushi%20Tours%20%26%20Travels,%20share%20tariff%20details%20please."
-                className="btn-secondary bg-white/15 text-white"
-              >
-                WhatsApp
-              </a>
-              <a href="/contact" className="btn-secondary bg-white/15 text-white">
-                Book Form
-              </a>
+              <a href="tel:+917411606748" className="btn-primary"><FiPhone /> Call Now</a>
+              <a href="https://wa.me/918919602258?text=Hi%20Sree%20Khushi%20Tours%20%26%20Travels,%20share%20tariff%20details%20please." className="btn-secondary bg-white/15 text-white">WhatsApp</a>
+              <a href="/contact" className="btn-secondary bg-white/15 text-white">Book Form</a>
             </div>
           </div>
         </div>

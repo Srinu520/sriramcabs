@@ -5,7 +5,7 @@ import CTAButtons from "@/components/CTAButtons";
 const faqs = [
   {
     question: "Do you provide 24/7 service?",
-    answer: "Yes, Sri Ram Cabs is available round the clock for local, airport and outstation rides.",
+    answer: "Yes, Sree Khushi Tours & Travels is available round the clock for local, airport and outstation rides.",
   },
   {
     question: "Which vehicles do you have?",
@@ -29,7 +29,7 @@ const faqs = [
   {
     question: "How do I book quickly?",
     answer:
-      "Call or WhatsApp +91 7411606748 for the fastest confirmation, or use the booking form with your date, time and route.",
+      "Call +91 7411606748 or WhatsApp +91 8919602258 for the fastest confirmation, or use the booking form with your date, time and route.",
   },
 ];
 

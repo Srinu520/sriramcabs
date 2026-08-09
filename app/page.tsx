@@ -56,9 +56,7 @@ export default function HomePage() {
         <div className="relative flex flex-col gap-10 px-6 py-12 lg:flex-row lg:items-center lg:px-12">
           <MotionSection className="flex-1 space-y-5 text-white">
             <span className="badge bg-white/15 text-white backdrop-blur">Bangalore • 24/7 Service</span>
-            <h1 className="text-3xl font-bold leading-tight md:text-4xl">
-              Sree Khushi Tours & Travels – Safe, Clean & Trusted Cabs in Bangalore
-            </h1>
+            <h1 className="text-3xl font-bold leading-tight md:text-4xl">Sree Khushi Tours & Travels – Safe, Clean & Trusted Cabs in Bangalore</h1>
             <p className="text-lg text-white/90">Ride Safe. Travel Happy with Sree Khushi.</p>
             <div className="flex flex-wrap items-center gap-3 text-sm text-white/80">
               <div className="flex items-center gap-2 rounded-full bg-white/10 px-3 py-2"><FiClock /> 24/7 Service</div>
@@ -141,14 +139,8 @@ export default function HomePage() {
             </div>
             <div className="mt-4 overflow-hidden rounded-2xl border border-brand-gold/40">
               <table className="w-full text-sm text-brand-dark/80">
-                <thead className="bg-brand-cream/80 text-left text-xs uppercase tracking-wide text-brand-dark">
-                  <tr><th className="px-4 py-3">Package</th><th className="px-4 py-3">Price</th><th className="px-4 py-3">Extra Km</th></tr>
-                </thead>
-                <tbody>
-                  {packages.map((pkg) => (
-                    <tr key={pkg.title} className="border-t border-brand-gold/30"><td className="px-4 py-3">{pkg.title}</td><td className="px-4 py-3 font-semibold">{pkg.price}</td><td className="px-4 py-3">{pkg.extra}</td></tr>
-                  ))}
-                </tbody>
+                <thead className="bg-brand-cream/80 text-left text-xs uppercase tracking-wide text-brand-dark"><tr><th className="px-4 py-3">Package</th><th className="px-4 py-3">Price</th><th className="px-4 py-3">Extra Km</th></tr></thead>
+                <tbody>{packages.map((pkg) => (<tr key={pkg.title} className="border-t border-brand-gold/30"><td className="px-4 py-3">{pkg.title}</td><td className="px-4 py-3 font-semibold">{pkg.price}</td><td className="px-4 py-3">{pkg.extra}</td></tr>))}</tbody>
               </table>
             </div>
           </div>
@@ -164,7 +156,7 @@ export default function HomePage() {
               <p className="text-xs text-white/70">*Final pricing may vary based on route, season and vehicle type. Contact us for an exact quote.</p>
               <div className="flex flex-wrap gap-3">
                 <a href="tel:+917411606748" className="btn-primary"><FiPhone /> Call for quote</a>
-                <a href="https://wa.me/917411606748?text=Hi%20Sree%20Khushi%20Tours%20%26%20Travels,%20I%20want%20an%20outstation%20quote." className="btn-secondary bg-white/15 text-white">WhatsApp</a>
+                <a href="https://wa.me/918919602258?text=Hi%20Sree%20Khushi%20Tours%20%26%20Travels,%20I%20want%20an%20outstation%20quote." className="btn-secondary bg-white/15 text-white">WhatsApp</a>
               </div>
             </div>
           </div>
@@ -185,7 +177,7 @@ export default function HomePage() {
         </div>
         <div className="mt-6 flex flex-wrap items-center gap-3">
           <a href="tel:+917411606748" className="btn-primary"><FiPhone /> Call for temple tour</a>
-          <a href="https://wa.me/917411606748?text=Hi%20Sree%20Khushi%20Tours%20%26%20Travels,%20I%20want%20to%20plan%20a%20temple%20tour." className="btn-secondary">WhatsApp itinerary</a>
+          <a href="https://wa.me/918919602258?text=Hi%20Sree%20Khushi%20Tours%20%26%20Travels,%20I%20want%20to%20plan%20a%20temple%20tour." className="btn-secondary">WhatsApp itinerary</a>
         </div>
       </section>
 
@@ -206,7 +198,7 @@ export default function HomePage() {
             <div className="flex items-center gap-3"><div className="h-12 w-12 rounded-full bg-brand-green/10 text-brand-green flex items-center justify-center"><FiPhone /></div><div><p className="text-sm font-semibold text-brand-dark/70">Need a ride?</p><h3 className="text-xl font-bold text-brand-dark">Call or WhatsApp Sree Khushi Tours & Travels</h3><p className="text-sm text-brand-dark/70">Fast response, polite drivers, clean cars.</p></div></div>
             <div className="mt-4 flex flex-wrap gap-3 text-sm">
               <a href="tel:+917411606748" className="btn-primary"><FiPhone /> Call +91 7411606748</a>
-              <a href="https://wa.me/917411606748?text=Hi%20Sree%20Khushi%20Tours%20%26%20Travels,%20I%20want%20to%20book%20a%20cab." className="btn-secondary">WhatsApp now</a>
+              <a href="https://wa.me/918919602258?text=Hi%20Sree%20Khushi%20Tours%20%26%20Travels,%20I%20want%20to%20book%20a%20cab." className="btn-secondary">WhatsApp +91 8919602258</a>
             </div>
             <div className="mt-4 grid gap-3 text-sm text-brand-dark/75 md:grid-cols-3">
               <div className="rounded-2xl bg-brand-cream/70 p-3"><p className="font-semibold text-brand-dark">Owner</p><p>Rama Krishna</p></div>
