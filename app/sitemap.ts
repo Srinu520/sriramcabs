@@ -7,7 +7,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/about",
     "/services",
-    "/tariffs",
     "/fleet",
     "/temple-tours",
     "/faq",
