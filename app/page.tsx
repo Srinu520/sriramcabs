@@ -61,6 +61,7 @@ export default function HomePage() {
             <span className="badge bg-white/15 text-white backdrop-blur">Bangalore • 24/7 Service</span>
             <h1 className="text-3xl font-bold leading-tight md:text-4xl">Sree Khushi Tours & Travels – Safe, Clean & Trusted Cabs in Bangalore</h1>
             <p className="text-lg text-white/90">Ride Safe. Travel Happy with Sree Khushi.</p>
+            <div className="inline-flex items-center rounded-full bg-brand-gold px-4 py-2 text-sm font-bold text-brand-dark shadow-soft">10+ Years Experience</div>
             <div className="flex flex-wrap items-center gap-3 text-sm text-white/80">
               <div className="flex items-center gap-2 rounded-full bg-white/10 px-3 py-2"><FiClock /> 24/7 Service</div>
               <div className="flex items-center gap-2 rounded-full bg-white/10 px-3 py-2"><FaRoute /> All India Outstation</div>
@@ -125,7 +126,7 @@ export default function HomePage() {
           <div>
             <p className="text-sm font-semibold uppercase tracking-wide text-brand-dark/60">Our Vehicles</p>
             <h2 className="text-2xl font-bold text-brand-dark">Choose your vehicle</h2>
-            <p className="mt-1 text-sm text-brand-dark/70">Select a vehicle and send your enquiry directly.</p>
+            <p className="mt-1 text-sm text-brand-dark/70">Clear vehicle photos and passenger capacity. Select a vehicle and send your enquiry directly.</p>
           </div>
           <Link href="#enquiry" className="btn-secondary">Send Enquiry</Link>
         </div>
@@ -133,9 +134,11 @@ export default function HomePage() {
           {vehicles.map((vehicle, idx) => (
             <MotionSection key={vehicle.title} delay={idx * 0.04}>
               <div className="overflow-hidden rounded-2xl border border-brand-gold/40 bg-brand-cream/60 shadow-soft">
-                <Image src={vehicle.image} alt={vehicle.alt} width={900} height={600} className="h-64 w-full object-cover" />
+                <div className="flex h-72 w-full items-center justify-center bg-white p-3">
+                  <Image src={vehicle.image} alt={vehicle.alt} width={900} height={600} className="h-full w-full object-contain" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                </div>
                 <div className="p-4">
-                  <h3 className="text-lg font-semibold text-brand-dark">{vehicle.title}</h3>
+                  <h3 className="text-xl font-bold text-brand-dark">{vehicle.title}</h3>
                   <p className="mt-1 text-sm font-medium text-brand-dark/80">Passengers: {vehicle.passengers}</p>
                   <Link href="#enquiry" className="mt-4 inline-flex w-full items-center justify-center rounded-xl bg-brand-green px-4 py-3 text-sm font-semibold text-white transition hover:opacity-90">Send Enquiry</Link>
                 </div>
