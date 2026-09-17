@@ -22,10 +22,13 @@ const services = [
   { title: "Temple & Pilgrimage Tours", desc: "Comfortable darshan trips with patient, devotional drivers.", icon: <FiStar /> },
 ];
 
-const packages = [
-  { title: "4 Hours / 40 KM", price: "₹1200", extra: "₹15/km" },
-  { title: "6 Hours / 60 KM", price: "₹1800", extra: "₹15/km" },
-  { title: "8 Hours / 80 KM", price: "₹2200", extra: "₹15/km" },
+const vehicles = [
+  { title: "Sedan", image: "/fleet-sedan.png", alt: "Sree Khushi Tours & Travels sedan" },
+  { title: "Premium SUV / MPV", image: "/fleet-suv.png", alt: "Sree Khushi Tours & Travels premium SUV" },
+  { title: "Ertiga / Family MPV", image: "/fleet-hatchback.png", alt: "Sree Khushi Tours & Travels family vehicle" },
+  { title: "Dzire / Sedan", image: "/fleet-sedan.png", alt: "Sree Khushi Tours & Travels Dzire sedan" },
+  { title: "Luxury Vehicle", image: "/fleet-luxury.png", alt: "Sree Khushi Tours & Travels luxury vehicle" },
+  { title: "Tempo Traveller", image: "/fleet-tempo.png", alt: "Sree Khushi Tours & Travels Tempo Traveller" },
 ];
 
 const templeTours = [
@@ -118,35 +121,32 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mt-16 grid gap-6 lg:grid-cols-2">
-        <MotionSection>
-          <div className="card-hover rounded-3xl border border-brand-gold/50 bg-white/80 p-6 shadow-soft">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-sm font-semibold text-brand-dark/60">Local Packages</p>
-                <h3 className="text-xl font-bold text-brand-dark">Bangalore city cab packages</h3>
-              </div>
-              <div className="rounded-full bg-brand-green/10 px-3 py-1 text-xs font-semibold text-brand-green">Transparent pricing</div>
-            </div>
-            <div className="mt-4 grid gap-4 md:grid-cols-3">
-              {packages.map((pkg) => (
-                <div key={pkg.title} className="rounded-2xl border border-brand-gold/40 bg-brand-cream/80 p-4 text-brand-dark">
-                  <p className="text-sm font-semibold text-brand-dark/70">{pkg.title}</p>
-                  <p className="mt-2 text-2xl font-bold">{pkg.price}</p>
-                  <p className="mt-1 text-xs text-brand-dark/70">Extra km: {pkg.extra}</p>
-                </div>
-              ))}
-            </div>
-            <div className="mt-4 overflow-hidden rounded-2xl border border-brand-gold/40">
-              <table className="w-full text-sm text-brand-dark/80">
-                <thead className="bg-brand-cream/80 text-left text-xs uppercase tracking-wide text-brand-dark"><tr><th className="px-4 py-3">Package</th><th className="px-4 py-3">Price</th><th className="px-4 py-3">Extra Km</th></tr></thead>
-                <tbody>{packages.map((pkg) => (<tr key={pkg.title} className="border-t border-brand-gold/30"><td className="px-4 py-3">{pkg.title}</td><td className="px-4 py-3 font-semibold">{pkg.price}</td><td className="px-4 py-3">{pkg.extra}</td></tr>))}</tbody>
-              </table>
-            </div>
+      <section className="mt-16 rounded-3xl border border-brand-gold/40 bg-white/80 p-6 shadow-soft">
+        <div className="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-wide text-brand-dark/60">Our Vehicles</p>
+            <h2 className="text-2xl font-bold text-brand-dark">Choose the right vehicle for your journey</h2>
+            <p className="mt-1 text-sm text-brand-dark/70">Clean, comfortable vehicles for local, airport, outstation and family travel.</p>
           </div>
-        </MotionSection>
+          <CTAButtons primaryLabel="Book a Cab" />
+        </div>
+        <div className="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {vehicles.map((vehicle, idx) => (
+            <MotionSection key={`${vehicle.title}-${idx}`} delay={idx * 0.04}>
+              <div className="overflow-hidden rounded-2xl border border-brand-gold/40 bg-brand-cream/60 shadow-soft">
+                <Image src={vehicle.image} alt={vehicle.alt} width={900} height={600} className="h-64 w-full object-cover" />
+                <div className="p-4">
+                  <h3 className="text-lg font-semibold text-brand-dark">{vehicle.title}</h3>
+                  <p className="mt-1 text-sm text-brand-dark/70">Comfortable, clean and ready for your trip.</p>
+                </div>
+              </div>
+            </MotionSection>
+          ))}
+        </div>
+      </section>
 
-        <MotionSection delay={0.05}>
+      <section className="mt-16">
+        <MotionSection>
           <div className="relative overflow-hidden rounded-3xl border border-brand-gold/50 bg-[url('/bg-city.png')] bg-cover bg-center shadow-glow">
             <div className="absolute inset-0 bg-gradient-to-br from-brand-dark/85 to-brand-green/80" />
             <div className="relative space-y-4 p-6 text-white">
