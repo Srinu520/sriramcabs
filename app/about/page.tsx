@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   const stats = [
-    { label: "Years of Service", value: "5+ Years" },
+    { label: "Years of Service", value: "10+ Years" },
     { label: "Availability", value: "24/7 Support" },
     { label: "Coverage", value: "All India" },
     { label: "Owner", value: "Rama Krishna" },
@@ -35,7 +35,7 @@ export default function AboutPage() {
           <MotionSection>
             <h1 className="text-3xl font-bold">About Sree Khushi Tours & Travels</h1>
             <p className="mt-3 text-lg text-white/85">
-              Based in Sarjapura, Sree Khushi Tours & Travels is led by Rama Krishna with 5+ years of dedicated service.
+              Based in Sarjapura, Sree Khushi Tours & Travels is led by Rama Krishna with 10+ years of dedicated service.
               We focus on safety, cleanliness and trust—serving families, corporate travellers, pilgrims and tourists across Anekal and Bangalore.
             </p>
             <p className="mt-2 text-sm text-white/75">
