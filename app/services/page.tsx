@@ -5,28 +5,28 @@ import { FiBriefcase, FiClock, FiMapPin, FiSmile, FiStar } from "react-icons/fi"
 import { FaCarAlt, FaRoute } from "react-icons/fa";
 
 export const metadata: Metadata = {
-  title: "Airport Taxi Services in Sarjapura Village, Sompura Gate, Bangalore | Sree Khushi Tours & Travels",
+  title: "Airport Taxi Services in Sarjapura Village, Sompura Gate & Gunjur, Bangalore | Sree Khushi Tours & Travels",
   description:
-    "Book 24/7 airport taxi services from Sarjapura Village, Sompura Gate, Bangalore and surrounding areas with Sree Khushi Tours & Travels.",
+    "Book 24/7 airport taxi services from Sarjapura Village, Sompura Gate, Gunjur and Bangalore with Sree Khushi Tours & Travels.",
   alternates: { canonical: "/services" },
 };
 
 const services = [
   {
-    title: "Airport Taxi from Sarjapura Village, Sompura Gate",
-    desc: "Kempegowda International Airport pick-up and drop from Sarjapura Village and Sompura Gate with buffer time and punctual drivers.",
+    title: "24/7 Airport Taxi – Sarjapura & Gunjur",
+    desc: "Kempegowda International Airport pick-up and drop from Sarjapura Village, Sompura Gate and Gunjur with punctual drivers and reliable service.",
     ideal: ["Early morning flights", "Business trips", "Family travel"],
     icon: <FiMapPin />,
   },
   {
-    title: "Airport Pickup & Drop from Sarjapura",
-    desc: "Reliable airport transfers from Sarjapura with clean vehicles, experienced drivers and timely pick-up and drop service.",
+    title: "Airport Pickup & Drop from Sarjapura & Gunjur",
+    desc: "Reliable airport transfers from Sarjapura and Gunjur with clean vehicles, experienced drivers and timely pick-up and drop service.",
     ideal: ["Airport transfers", "Early flights"],
     icon: <FiClock />,
   },
   {
-    title: "Outstation Cabs from Sarjapura",
-    desc: "One-way and round-trip outstation cabs from Sarjapura and Bangalore to destinations across India.",
+    title: "Outstation Cabs from Sarjapura & Gunjur",
+    desc: "One-way and round-trip outstation cabs from Sarjapura, Gunjur and Bangalore to destinations across India.",
     ideal: ["Families", "Tourists", "Corporate travellers"],
     icon: <FaRoute />,
   },
@@ -44,13 +44,13 @@ const services = [
   },
   {
     title: "Temple & Pilgrimage Tours",
-    desc: "Temple tour cabs from Sarjapura and Bangalore with patient drivers, flexible stops and clean vehicles.",
+    desc: "Temple tour cabs from Sarjapura, Gunjur and Bangalore with patient drivers, flexible stops and clean vehicles.",
     ideal: ["Pilgrims", "Family elders"],
     icon: <FiStar />,
   },
   {
     title: "Holiday / Tour Packages",
-    desc: "Custom cab packages for hill stations, beaches, heritage circuits and family holidays from Sarjapura and Bangalore.",
+    desc: "Custom cab packages for hill stations, beaches, heritage circuits and family holidays from Sarjapura, Gunjur and Bangalore.",
     ideal: ["Friends", "Families", "Tourists"],
     icon: <FiSmile />,
   },
@@ -64,9 +64,9 @@ export default function ServicesPage() {
           <div className="flex flex-wrap items-center justify-between gap-3">
             <div>
               <p className="text-sm font-semibold uppercase tracking-wide text-brand-dark/60">Services</p>
-              <h1 className="text-3xl font-bold text-brand-dark">Airport Taxi Services in Sarjapura Village, Sompura Gate, Bangalore</h1>
+              <h1 className="text-3xl font-bold text-brand-dark">24/7 Airport Taxi Services in Sarjapura, Gunjur & Bangalore</h1>
               <p className="text-sm text-brand-dark/70">
-                Sree Khushi Tours & Travels provides 24/7 airport taxi services from Sarjapura Village, Sompura Gate, Bangalore and surrounding areas.
+                Sree Khushi Tours & Travels provides 24/7 airport taxi services from Sarjapura Village, Sompura Gate, Gunjur and Bangalore.
               </p>
             </div>
             <CTAButtons />
