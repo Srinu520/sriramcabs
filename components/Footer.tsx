@@ -6,7 +6,6 @@ const quickLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
-  { label: "Tariffs", href: "/tariffs" },
   { label: "Fleet", href: "/fleet" },
   { label: "Temple Tours", href: "/temple-tours" },
   { label: "FAQ", href: "/faq" },
@@ -27,7 +26,7 @@ export default function Footer() {
             </div>
           </div>
           <p className="text-sm leading-relaxed text-brand-dark/80">
-            24/7 cab and taxi service in Sarjapura, Anekal and Bangalore for local rides, airport transfers, outstation travel and pilgrimage tours.
+            24/7 cab and taxi service in Sarjapura and Bangalore for local rides, airport transfers, outstation travel and pilgrimage tours.
           </p>
         </div>
 
@@ -66,7 +65,7 @@ export default function Footer() {
       </div>
       <div className="border-t border-brand-gold/30 bg-brand-cream/70 py-4 text-center text-xs text-brand-dark/70">
         <p>© {year} Sree Khushi Tours & Travels. All rights reserved.</p>
-        <p className="mt-1">Cab Service in Sarjapura & Anekal | Airport Taxi | Local & Outstation Cabs | Bangalore.</p>
+        <p className="mt-1">Cab Service in Sarjapura | Airport Taxi | Local & Outstation Cabs | Bangalore.</p>
       </div>
     </footer>
   );
