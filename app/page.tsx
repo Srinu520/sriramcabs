@@ -23,12 +23,12 @@ const services = [
 ];
 
 const vehicles = [
-  { title: "Sedan", passengers: "4 + 5", image: "/fleet-sedan.png", alt: "Sree Khushi Tours & Travels Sedan" },
-  { title: "Dzire", passengers: "4 + 5", image: "/fleet-hatchback.png", alt: "Sree Khushi Tours & Travels Dzire" },
-  { title: "Ertiga", passengers: "6 + 7", image: "/fleet-suv.png", alt: "Sree Khushi Tours & Travels Ertiga" },
-  { title: "Innova", passengers: "6 + 7", image: "/fleet-suv1.png", alt: "Sree Khushi Tours & Travels Innova" },
-  { title: "Force Tempo Traveller", passengers: "9 + 12", image: "/fleet-tempo.png", alt: "Sree Khushi Tours & Travels Force Tempo Traveller" },
-  { title: "Force Urbania", passengers: "12 + 17", image: "/fleet-luxury.png", alt: "Sree Khushi Tours & Travels Force Urbania" },
+  { title: "Sedan", passengers: "4 + 5", image: "/sedan.png", alt: "Sree Khushi Tours & Travels Sedan" },
+  { title: "Dzire", passengers: "4 + 5", image: "/dzire.png", alt: "Sree Khushi Tours & Travels Dzire" },
+  { title: "Ertiga", passengers: "6 + 7", image: "/ertiga.png", alt: "Sree Khushi Tours & Travels Ertiga" },
+  { title: "Innova", passengers: "6 + 7", image: "/innova.png", alt: "Sree Khushi Tours & Travels Innova" },
+  { title: "Force Tempo Traveller", passengers: "9 + 12", image: "/tempo-traveller.png", alt: "Sree Khushi Tours & Travels Force Tempo Traveller" },
+  { title: "Force Urbania", passengers: "12 + 17", image: "/urbania.png", alt: "Sree Khushi Tours & Travels Force Urbania" },
 ];
 
 const templeTours = [
