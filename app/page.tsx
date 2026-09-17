@@ -77,13 +77,28 @@ export default function HomePage() {
               <div className="absolute -left-8 -top-6 hidden h-16 w-16 rounded-2xl bg-gradient-to-br from-brand-gold to-brand-green/70 opacity-70 blur-2xl md:block" />
               <Image src="/hero-sedan1.png" alt="Sree Khushi Tours & Travels sedan" width={700} height={420} className="mx-auto drop-shadow-2xl" priority />
               <div className="mt-4 flex flex-wrap items-center gap-3 text-sm text-brand-dark/80">
-                <div className="badge bg-brand-cream">Clean & Sanitized</div>
                 <div className="badge bg-brand-green/10 text-white">Experienced Drivers</div>
                 <div className="badge bg-brand-gold/20 text-brand-dark">Transparent Service</div>
               </div>
             </div>
           </MotionSection>
         </div>
+      </section>
+
+      <section className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {[
+          ["10+ Years", "Experience"],
+          ["24/7", "Service"],
+          ["6", "Vehicle Types"],
+          ["All India", "Outstation"],
+        ].map(([value, label], idx) => (
+          <MotionSection key={label} delay={idx * 0.04}>
+            <div className="rounded-2xl border border-brand-gold/40 bg-white/90 p-5 text-center shadow-soft">
+              <p className="text-2xl font-extrabold text-brand-green">{value}</p>
+              <p className="mt-1 text-sm font-semibold text-brand-dark/70">{label}</p>
+            </div>
+          </MotionSection>
+        ))}
       </section>
 
       <section className="mt-16 grid gap-6 md:grid-cols-2">
@@ -134,8 +149,8 @@ export default function HomePage() {
           {vehicles.map((vehicle, idx) => (
             <MotionSection key={vehicle.title} delay={idx * 0.04}>
               <div className="overflow-hidden rounded-2xl border border-brand-gold/40 bg-brand-cream/60 shadow-soft">
-                <div className="flex h-72 w-full items-center justify-center bg-white p-3">
-                  <Image src={vehicle.image} alt={vehicle.alt} width={900} height={600} className="h-full w-full object-contain" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                <div className="flex h-80 w-full items-center justify-center bg-gradient-to-b from-white to-brand-cream/30 p-2 sm:h-72">
+                  <Image src={vehicle.image} alt={vehicle.alt} width={1200} height={800} quality={100} className="h-full w-full object-contain" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
                 </div>
                 <div className="p-4">
                   <h3 className="text-xl font-bold text-brand-dark">{vehicle.title}</h3>
