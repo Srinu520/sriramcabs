@@ -10,7 +10,7 @@ const whyChoose = [
   { title: "Safe & Experienced Drivers", desc: "Trained, polite chauffeurs with strong city and highway expertise.", icon: <FiShield /> },
   { title: "Clean & Sanitized Cars", desc: "We keep interiors spotless and comfortable for families & executives.", icon: <FiStar /> },
   { title: "On-Time Pick-ups", desc: "Punctual service with proactive updates for airport and early-morning trips.", icon: <FiClock /> },
-  { title: "All Vehicles, 24/7", desc: "Hatchback, Sedan, SUV, Tempo Traveller and Luxury vehicles anytime.", icon: <FaCarAlt /> },
+  { title: "All Vehicles, 24/7", desc: "Sedan, Dzire, Ertiga, Innova, Tempo Traveller and Force Urbania anytime.", icon: <FaCarAlt /> },
 ];
 
 const services = [
@@ -23,12 +23,12 @@ const services = [
 ];
 
 const vehicles = [
-  { title: "Sedan", image: "/fleet-sedan.png", alt: "Sree Khushi Tours & Travels sedan" },
-  { title: "Premium SUV / MPV", image: "/fleet-suv.png", alt: "Sree Khushi Tours & Travels premium SUV" },
-  { title: "Ertiga / Family MPV", image: "/fleet-hatchback.png", alt: "Sree Khushi Tours & Travels family vehicle" },
-  { title: "Dzire / Sedan", image: "/fleet-sedan.png", alt: "Sree Khushi Tours & Travels Dzire sedan" },
-  { title: "Luxury Vehicle", image: "/fleet-luxury.png", alt: "Sree Khushi Tours & Travels luxury vehicle" },
-  { title: "Tempo Traveller", image: "/fleet-tempo.png", alt: "Sree Khushi Tours & Travels Tempo Traveller" },
+  { title: "Sedan", passengers: "4 + 5", image: "/fleet-sedan.png", alt: "Sree Khushi Tours & Travels Sedan" },
+  { title: "Dzire", passengers: "4 + 5", image: "/fleet-hatchback.png", alt: "Sree Khushi Tours & Travels Dzire" },
+  { title: "Ertiga", passengers: "6 + 7", image: "/fleet-suv.png", alt: "Sree Khushi Tours & Travels Ertiga" },
+  { title: "Innova", passengers: "6 + 7", image: "/fleet-suv1.png", alt: "Sree Khushi Tours & Travels Innova" },
+  { title: "Force Tempo Traveller", passengers: "9 + 12", image: "/fleet-tempo.png", alt: "Sree Khushi Tours & Travels Force Tempo Traveller" },
+  { title: "Force Urbania", passengers: "12 + 17", image: "/fleet-luxury.png", alt: "Sree Khushi Tours & Travels Force Urbania" },
 ];
 
 const templeTours = [
@@ -46,9 +46,9 @@ const templeTours = [
 
 const steps = [
   { title: "Tell us your route", text: "Local, airport, outstation or temple tour with timings." },
-  { title: "Pick a vehicle", text: "Hatchback, Sedan, SUV, Tempo Traveller or Luxury options." },
-  { title: "Transparent quote", text: "Clear pricing with toll/parking details and driver bata." },
-  { title: "Relax & ride", text: "Polite driver arrives early, clean car ready for you." },
+  { title: "Pick a vehicle", text: "Sedan, Dzire, Ertiga, Innova, Tempo Traveller or Force Urbania." },
+  { title: "Get a clear quote", text: "We confirm the route, vehicle and trip details before booking." },
+  { title: "Relax & ride", text: "Polite driver arrives early and your vehicle is ready for you." },
 ];
 
 export default function HomePage() {
@@ -63,12 +63,11 @@ export default function HomePage() {
             <p className="text-lg text-white/90">Ride Safe. Travel Happy with Sree Khushi.</p>
             <div className="flex flex-wrap items-center gap-3 text-sm text-white/80">
               <div className="flex items-center gap-2 rounded-full bg-white/10 px-3 py-2"><FiClock /> 24/7 Service</div>
-              <div className="flex items-center gap-2 rounded-full bg-white/10 px-3 py-2"><FiStar /> Clean Cars</div>
               <div className="flex items-center gap-2 rounded-full bg-white/10 px-3 py-2"><FaRoute /> All India Outstation</div>
               <div className="flex items-center gap-2 rounded-full bg-white/10 px-3 py-2"><FiUsers /> Trusted Drivers</div>
             </div>
             <div className="flex flex-wrap gap-3">
-              <Link href="#booking" className="btn-primary">Book a Cab</Link>
+              <Link href="#enquiry" className="btn-primary">Send Enquiry</Link>
               <a href="tel:+917411606748" className="btn-secondary"><FiPhone /> Call Now</a>
             </div>
           </MotionSection>
@@ -79,7 +78,7 @@ export default function HomePage() {
               <div className="mt-4 flex flex-wrap items-center gap-3 text-sm text-brand-dark/80">
                 <div className="badge bg-brand-cream">Clean & Sanitized</div>
                 <div className="badge bg-brand-green/10 text-white">Experienced Drivers</div>
-                <div className="badge bg-brand-gold/20 text-brand-dark">Transparent Pricing</div>
+                <div className="badge bg-brand-gold/20 text-brand-dark">Transparent Service</div>
               </div>
             </div>
           </MotionSection>
@@ -125,42 +124,25 @@ export default function HomePage() {
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
             <p className="text-sm font-semibold uppercase tracking-wide text-brand-dark/60">Our Vehicles</p>
-            <h2 className="text-2xl font-bold text-brand-dark">Choose the right vehicle for your journey</h2>
-            <p className="mt-1 text-sm text-brand-dark/70">Clean, comfortable vehicles for local, airport, outstation and family travel.</p>
+            <h2 className="text-2xl font-bold text-brand-dark">Choose your vehicle</h2>
+            <p className="mt-1 text-sm text-brand-dark/70">Select a vehicle and send your enquiry directly.</p>
           </div>
-          <CTAButtons primaryLabel="Book a Cab" />
+          <Link href="#enquiry" className="btn-secondary">Send Enquiry</Link>
         </div>
         <div className="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {vehicles.map((vehicle, idx) => (
-            <MotionSection key={`${vehicle.title}-${idx}`} delay={idx * 0.04}>
+            <MotionSection key={vehicle.title} delay={idx * 0.04}>
               <div className="overflow-hidden rounded-2xl border border-brand-gold/40 bg-brand-cream/60 shadow-soft">
                 <Image src={vehicle.image} alt={vehicle.alt} width={900} height={600} className="h-64 w-full object-cover" />
                 <div className="p-4">
                   <h3 className="text-lg font-semibold text-brand-dark">{vehicle.title}</h3>
-                  <p className="mt-1 text-sm text-brand-dark/70">Comfortable, clean and ready for your trip.</p>
+                  <p className="mt-1 text-sm font-medium text-brand-dark/80">Passengers: {vehicle.passengers}</p>
+                  <Link href="#enquiry" className="mt-4 inline-flex w-full items-center justify-center rounded-xl bg-brand-green px-4 py-3 text-sm font-semibold text-white transition hover:opacity-90">Send Enquiry</Link>
                 </div>
               </div>
             </MotionSection>
           ))}
         </div>
-      </section>
-
-      <section className="mt-16">
-        <MotionSection>
-          <div className="relative overflow-hidden rounded-3xl border border-brand-gold/50 bg-[url('/bg-city.png')] bg-cover bg-center shadow-glow">
-            <div className="absolute inset-0 bg-gradient-to-br from-brand-dark/85 to-brand-green/80" />
-            <div className="relative space-y-4 p-6 text-white">
-              <p className="text-sm font-semibold uppercase tracking-wide text-white/70">Outstation Tariff</p>
-              <h3 className="text-2xl font-bold">All India outstation cabs from Bangalore</h3>
-              <ul className="space-y-2 text-sm text-white/85"><li>Minimum 300 KM per day</li><li>Per KM: ₹13/km</li><li>Driver Bata: ₹400/day</li><li>Toll, parking and temporary permits extra</li></ul>
-              <p className="text-xs text-white/70">*Final pricing may vary based on route, season and vehicle type. Contact us for an exact quote.</p>
-              <div className="flex flex-wrap gap-3">
-                <a href="tel:+917411606748" className="btn-primary"><FiPhone /> Call for quote</a>
-                <a href="https://wa.me/918919602258?text=Hi%20Sree%20Khushi%20Tours%20%26%20Travels,%20I%20want%20an%20outstation%20quote." className="btn-secondary bg-white/15 text-white">WhatsApp</a>
-              </div>
-            </div>
-          </div>
-        </MotionSection>
       </section>
 
       <section className="mt-16 rounded-3xl border border-brand-gold/40 bg-white/80 p-6 shadow-soft">
@@ -192,10 +174,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="booking" className="mt-16 grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
+      <section id="enquiry" className="mt-16 grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
         <MotionSection>
           <div className="rounded-3xl border border-brand-gold/50 bg-white/80 p-6 shadow-soft">
-            <div className="flex items-center gap-3"><div className="h-12 w-12 rounded-full bg-brand-green/10 text-brand-green flex items-center justify-center"><FiPhone /></div><div><p className="text-sm font-semibold text-brand-dark/70">Need a ride?</p><h3 className="text-xl font-bold text-brand-dark">Call or WhatsApp Sree Khushi Tours & Travels</h3><p className="text-sm text-brand-dark/70">Fast response, polite drivers, clean cars.</p></div></div>
+            <div className="flex items-center gap-3"><div className="h-12 w-12 rounded-full bg-brand-green/10 text-brand-green flex items-center justify-center"><FiPhone /></div><div><p className="text-sm font-semibold text-brand-dark/70">Need a ride?</p><h3 className="text-xl font-bold text-brand-dark">Send an Enquiry to Sree Khushi Tours & Travels</h3><p className="text-sm text-brand-dark/70">Tell us your route, date and preferred vehicle.</p></div></div>
             <div className="mt-4 flex flex-wrap gap-3 text-sm">
               <a href="tel:+917411606748" className="btn-primary"><FiPhone /> Call +91 7411606748</a>
               <a href="https://wa.me/918919602258?text=Hi%20Sree%20Khushi%20Tours%20%26%20Travels,%20I%20want%20to%20book%20a%20cab." className="btn-secondary">WhatsApp +91 8919602258</a>
@@ -203,7 +185,7 @@ export default function HomePage() {
             <div className="mt-4 grid gap-3 text-sm text-brand-dark/75 md:grid-cols-3">
               <div className="rounded-2xl bg-brand-cream/70 p-3"><p className="font-semibold text-brand-dark">Owner</p><p>Rama Krishna</p></div>
               <div className="rounded-2xl bg-brand-cream/70 p-3"><p className="font-semibold text-brand-dark">Base Location</p><p>Bangalore, Karnataka</p></div>
-              <div className="rounded-2xl bg-brand-cream/70 p-3"><p className="font-semibold text-brand-dark">Experience</p><p>5+ Years</p></div>
+              <div className="rounded-2xl bg-brand-cream/70 p-3"><p className="font-semibold text-brand-dark">Experience</p><p>10+ Years</p></div>
             </div>
           </div>
         </MotionSection>
@@ -212,7 +194,7 @@ export default function HomePage() {
 
       <div className="mt-12 flex items-start gap-3 rounded-2xl border border-brand-gold/40 bg-brand-cream/60 px-4 py-3 text-sm text-brand-dark/80">
         <FiAlertCircle className="mt-0.5 text-brand-green" />
-        <p>All types of vehicles available: Hatchback, Sedan, SUV, Tempo Traveller and Luxury vehicles. Final pricing may vary based on route, season and vehicle type.</p>
+        <p>Our fleet includes Sedan, Dzire, Ertiga, Innova, Force Tempo Traveller and Force Urbania. Contact us for vehicle availability and trip details.</p>
       </div>
     </div>
   );
