@@ -5,28 +5,28 @@ import { FiBriefcase, FiClock, FiMapPin, FiSmile, FiStar } from "react-icons/fi"
 import { FaCarAlt, FaRoute } from "react-icons/fa";
 
 export const metadata: Metadata = {
-  title: "Cab Service in Sarjapura & Anekal | Airport, Local & Outstation Cabs",
+  title: "Cab Services in Sarjapura & Bangalore | Airport Taxi, Outstation Cabs",
   description:
-    "Book 24/7 cab service in Sarjapura, Sompara Gate, Anekal and Bangalore. Local taxi, airport cabs, outstation cars, tempo traveller, corporate and temple tours.",
+    "Book 24/7 cab service in Sarjapura Village, Sompura Gate and Bangalore. Airport taxi, local cabs, outstation cars, tempo traveller, corporate and temple tours.",
   alternates: { canonical: "/services" },
 };
 
 const services = [
   {
-    title: "Local Cab Service in Sarjapura & Anekal",
-    desc: "Local taxi rides around Sarjapura, Sompara Gate, Anekal and nearby Bangalore areas for daily commute, shopping and family travel.",
-    ideal: ["Families", "Students", "IT employees"],
+    title: "Airport Taxi from Sarjapura Village, Sompura Gate",
+    desc: "Kempegowda International Airport pick-up and drop from Sarjapura Village and Sompura Gate with buffer time and punctual drivers.",
+    ideal: ["Early morning flights", "Business trips", "Family travel"],
     icon: <FiMapPin />,
   },
   {
-    title: "Airport Taxi from Sarjapura",
-    desc: "Kempegowda International Airport pick-up and drop from Sarjapura and Anekal with buffer time and punctual drivers.",
-    ideal: ["Early morning flights", "Business trips"],
+    title: "Airport Pickup & Drop from Sarjapura",
+    desc: "Reliable airport transfers from Sarjapura with clean vehicles, experienced drivers and timely pick-up and drop service.",
+    ideal: ["Airport transfers", "Early flights"],
     icon: <FiClock />,
   },
   {
     title: "Outstation Cabs from Sarjapura",
-    desc: "One-way and round-trip outstation cabs from Sarjapura, Anekal and Bangalore to destinations across India.",
+    desc: "One-way and round-trip outstation cabs from Sarjapura and Bangalore to destinations across India.",
     ideal: ["Families", "Tourists", "Corporate travellers"],
     icon: <FaRoute />,
   },
@@ -38,7 +38,7 @@ const services = [
   },
   {
     title: "Wedding / Event Transport",
-    desc: "Coordinated guest transportation with hatchbacks, sedans, SUVs and tempo travellers for functions and events.",
+    desc: "Coordinated guest transportation with our latest vehicles and tempo travellers for functions and events.",
     ideal: ["Weddings", "Functions", "Receptions"],
     icon: <FaCarAlt />,
   },
@@ -64,9 +64,9 @@ export default function ServicesPage() {
           <div className="flex flex-wrap items-center justify-between gap-3">
             <div>
               <p className="text-sm font-semibold uppercase tracking-wide text-brand-dark/60">Services</p>
-              <h1 className="text-3xl font-bold text-brand-dark">Cab & Taxi Services in Sarjapura, Anekal and Bangalore</h1>
+              <h1 className="text-3xl font-bold text-brand-dark">Cab & Taxi Services in Sarjapura and Bangalore</h1>
               <p className="text-sm text-brand-dark/70">
-                Sree Khushi Tours & Travels provides 24/7 local cabs, airport taxis, outstation cars, tempo travellers and tour services from Sarjapura and Anekal.
+                Sree Khushi Tours & Travels provides 24/7 airport taxis, local cabs, outstation cars, tempo travellers and tour services from Sarjapura Village, Sompura Gate and Bangalore.
               </p>
             </div>
             <CTAButtons />
