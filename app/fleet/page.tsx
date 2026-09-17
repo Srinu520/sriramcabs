@@ -5,18 +5,19 @@ import { MotionSection } from "@/components/MotionSection";
 import { FiUsers } from "react-icons/fi";
 
 export const metadata: Metadata = {
-  title: "Cab Fleet in Sarjapura & Anekal | Sedan, SUV & Tempo Traveller",
+  title: "Our Vehicles in Sarjapura & Bangalore | Sree Khushi Tours & Travels",
   description:
-    "Book hatchback, sedan, SUV, tempo traveller and luxury cabs in Sarjapura, Anekal and Bangalore with Sree Khushi Tours & Travels.",
+    "View the latest Sree Khushi Tours & Travels vehicle fleet: Sedan, Dzire, Ertiga, Innova, Force Tempo Traveller and Force Urbania.",
   alternates: { canonical: "/fleet" },
 };
 
 const fleet = [
-  { title: "Hatchback", seats: "4 passengers", bestFor: "City commutes, solo or couple trips", image: "/fleet-hatchback.png" },
-  { title: "Sedan", seats: "4 passengers + luggage", bestFor: "Airport rides, family trips, executives", image: "/fleet-sedan.png" },
-  { title: "SUV", seats: "6-7 passengers", bestFor: "Outstation, hill stations, family tours", image: "/fleet-suv1.png" },
-  { title: "Tempo Traveller", seats: "12-17 passengers", bestFor: "Group tours, weddings, team outings", image: "/fleet-tempo.png" },
-  { title: "Luxury", seats: "4 passengers", bestFor: "Premium travel, VIP movement", image: "/fleet-luxury.png" },
+  { title: "Sedan", seats: "4 + 5 passengers", bestFor: "Airport taxi, local rides and family trips", image: "/sedan.png" },
+  { title: "Dzire", seats: "4 + 5 passengers", bestFor: "Airport taxi, local rides and comfortable travel", image: "/dzire.png" },
+  { title: "Ertiga", seats: "6 + 7 passengers", bestFor: "Family trips and outstation travel", image: "/ertiga.png" },
+  { title: "Innova", seats: "6 + 7 passengers", bestFor: "Outstation trips, family tours and long journeys", image: "/innova.png" },
+  { title: "Force Tempo Traveller", seats: "9 + 12 passengers", bestFor: "Group tours, weddings and pilgrimage trips", image: "/tempo-traveller.png" },
+  { title: "Force Urbania", seats: "12 + 17 passengers", bestFor: "Premium group travel and long-distance tours", image: "/urbania.png" },
 ];
 
 export default function FleetPage() {
@@ -26,8 +27,8 @@ export default function FleetPage() {
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div>
             <p className="text-sm font-semibold uppercase tracking-wide text-brand-dark/60">Our Fleet</p>
-            <h1 className="text-3xl font-bold text-brand-dark">Cab Fleet in Sarjapura, Anekal & Bangalore</h1>
-            <p className="text-sm text-brand-dark/70">Hatchback, Sedan, SUV, Tempo Traveller and Luxury vehicles for local, airport and outstation trips.</p>
+            <h1 className="text-3xl font-bold text-brand-dark">Our Vehicles in Sarjapura & Bangalore</h1>
+            <p className="text-sm text-brand-dark/70">Choose from our latest vehicle photos and book the vehicle that suits your trip.</p>
           </div>
           <CTAButtons />
         </div>
@@ -36,15 +37,14 @@ export default function FleetPage() {
           {fleet.map((item, idx) => (
             <MotionSection key={item.title} delay={idx * 0.04}>
               <div className="card-hover h-full overflow-hidden rounded-2xl border border-brand-gold/40 bg-white/90 shadow-soft">
-                <div className="relative h-40 w-full">
-                  <Image src={item.image} alt={`${item.title} cab - Sree Khushi Tours & Travels`} fill className="object-cover" sizes="(max-width:768px) 100vw, 400px" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                  <span className="absolute left-4 top-4 rounded-full bg-white/80 px-3 py-1 text-xs font-semibold text-brand-dark">{item.title}</span>
+                <div className="relative flex h-64 w-full items-center justify-center bg-gradient-to-b from-white to-brand-cream/30 p-2">
+                  <Image src={item.image} alt={`${item.title} - Sree Khushi Tours & Travels`} width={1200} height={800} quality={100} className="h-full w-full object-contain" sizes="(max-width:768px) 100vw, 400px" />
                 </div>
                 <div className="space-y-2 p-4">
+                  <h2 className="text-xl font-bold text-brand-dark">{item.title}</h2>
                   <div className="flex items-center gap-2 text-sm font-semibold text-brand-dark"><FiUsers /> {item.seats}</div>
-                  <p className="text-sm text-brand-dark/70">Best for: {item.bestFor}</p>
-                  <a href="/contact" className="text-sm font-semibold text-brand-green">Book this vehicle →</a>
+                  <p className="text-sm text-brand-dark/70">{item.bestFor}</p>
+                  <a href="/contact" className="inline-flex text-sm font-semibold text-brand-green">Book this vehicle →</a>
                 </div>
               </div>
             </MotionSection>
