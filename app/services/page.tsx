@@ -5,9 +5,9 @@ import { FiBriefcase, FiClock, FiMapPin, FiSmile, FiStar } from "react-icons/fi"
 import { FaCarAlt, FaRoute } from "react-icons/fa";
 
 export const metadata: Metadata = {
-  title: "Cab Services in Sarjapura & Bangalore | Airport Taxi, Outstation Cabs",
+  title: "Airport Taxi Services in Sarjapura Village, Sompura Gate, Bangalore | Sree Khushi Tours & Travels",
   description:
-    "Book 24/7 cab service in Sarjapura Village, Sompura Gate and Bangalore. Airport taxi, local cabs, outstation cars, tempo traveller, corporate and temple tours.",
+    "Book 24/7 airport taxi services from Sarjapura Village, Sompura Gate, Bangalore and surrounding areas with Sree Khushi Tours & Travels.",
   alternates: { canonical: "/services" },
 };
 
@@ -64,9 +64,9 @@ export default function ServicesPage() {
           <div className="flex flex-wrap items-center justify-between gap-3">
             <div>
               <p className="text-sm font-semibold uppercase tracking-wide text-brand-dark/60">Services</p>
-              <h1 className="text-3xl font-bold text-brand-dark">Cab & Taxi Services in Sarjapura and Bangalore</h1>
+              <h1 className="text-3xl font-bold text-brand-dark">Airport Taxi Services in Sarjapura Village, Sompura Gate, Bangalore</h1>
               <p className="text-sm text-brand-dark/70">
-                Sree Khushi Tours & Travels provides 24/7 airport taxis, local cabs, outstation cars, tempo travellers and tour services from Sarjapura Village, Sompura Gate and Bangalore.
+                Sree Khushi Tours & Travels provides 24/7 airport taxi services from Sarjapura Village, Sompura Gate, Bangalore and surrounding areas.
               </p>
             </div>
             <CTAButtons />
