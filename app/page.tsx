@@ -89,7 +89,7 @@ export default function HomePage() {
         {[
           ["10+ Years", "Experience"],
           ["24/7", "Service"],
-          ["6", "Vehicle Types"],
+          ["All Types", "Vehicles Available"],
           ["All India", "Outstation"],
         ].map(([value, label], idx) => (
           <MotionSection key={label} delay={idx * 0.04}>
