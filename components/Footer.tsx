@@ -1,72 +1,19 @@
 import Link from "next/link";
-import { FiClock, FiMail, FiMapPin, FiPhone } from "react-icons/fi";
-import { FaWhatsapp } from "react-icons/fa";
+import { FiMapPin, FiPhone } from "react-icons/fi";
+import { FaFacebookF, FaInstagram, FaWhatsapp, FaYoutube } from "react-icons/fa";
 
-const quickLinks = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Services", href: "/services" },
-  { label: "Fleet", href: "/fleet" },
-  { label: "Temple Tours", href: "/temple-tours" },
-  { label: "FAQ", href: "/faq" },
-  { label: "Contact", href: "/contact" },
-];
+const googleReviewsLink = "https://maps.app.goo.gl/EdXqAJ3U7193W6x67?g_st=ac";
 
 export default function Footer() {
-  const year = new Date().getFullYear();
   return (
-    <footer className="mt-20 border-t border-brand-gold/30 bg-white/70 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl flex-col gap-12 px-4 py-12 md:flex-row md:justify-between">
-        <div className="max-w-sm space-y-3">
-          <div className="flex items-center gap-2">
-            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-brand-green to-brand-dark text-white shadow-glow">SK</span>
-            <div>
-              <p className="text-lg font-semibold text-brand-dark">Sree Khushi Tours & Travels</p>
-              <p className="text-sm text-brand-dark/70">Safe, clean & trusted journeys</p>
-            </div>
-          </div>
-          <p className="text-sm leading-relaxed text-brand-dark/80">
-            24/7 cab and taxi service in Sarjapura and Bangalore for local rides, airport transfers, outstation travel and pilgrimage tours.
-          </p>
-        </div>
-
-        <div>
-          <p className="mb-3 text-base font-semibold text-brand-dark">Quick Links</p>
-          <div className="grid grid-cols-2 gap-2 text-sm text-brand-dark/80">
-            {quickLinks.map((item) => (
-              <Link key={item.href} href={item.href} className="hover:text-brand-dark">{item.label}</Link>
-            ))}
-          </div>
-        </div>
-
-        <div className="max-w-md space-y-2 text-sm text-brand-dark/80">
-          <p className="text-base font-semibold text-brand-dark">Contact</p>
-          <div className="flex items-center gap-2">
-            <FiPhone className="text-brand-green" />
-            <a href="tel:+917411606748" className="hover:text-brand-dark">Call: +91 7411606748</a>
-          </div>
-          <div className="flex items-center gap-2">
-            <FaWhatsapp className="text-brand-green" />
-            <a href="https://wa.me/918919602258" className="hover:text-brand-dark">WhatsApp: +91 8919602258</a>
-          </div>
-          <div className="flex items-center gap-2">
-            <FiMail className="text-brand-green" />
-            <a href="mailto:sreekhushitours@gmail.com" className="hover:text-brand-dark">sreekhushitours@gmail.com</a>
-          </div>
-          <div className="flex items-start gap-2">
-            <FiMapPin className="mt-0.5 shrink-0 text-brand-green" />
-            <span>Anekal Taluk, Near Ram Temple, 21 Krishna Reddy Building, Sompara Gate, Sarjapura, Bangalore, Karnataka 562125</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <FiClock className="text-brand-green" />
-            <span>24/7 Service</span>
-          </div>
-        </div>
+    <footer className="bg-[#061f3d] text-white">
+      <div className="mx-auto grid max-w-7xl gap-8 px-5 py-10 sm:px-8 lg:grid-cols-[1fr_.9fr_1.2fr_1fr] lg:px-10">
+        <div><p className="text-2xl font-black text-brand-gold">Sree Khushi</p><p className="font-bold">Tours & Travels</p><p className="mt-4 text-sm text-white/65">Travel Safe • Travel Happy</p></div>
+        <div><h3 className="font-bold text-brand-gold">Quick Links</h3><div className="mt-4 space-y-2 text-sm text-white/70"><Link className="block hover:text-white" href="/">Home</Link><Link className="block hover:text-white" href="/about">About Us</Link><Link className="block hover:text-white" href="/fleet">Our Fleet</Link><Link className="block hover:text-white" href="/services">Services</Link><a className="block hover:text-white" href={googleReviewsLink} target="_blank" rel="noreferrer">Google Reviews</a><Link className="block hover:text-white" href="/contact">Contact</Link></div></div>
+        <div><h3 className="font-bold text-brand-gold">Contact Us</h3><div className="mt-4 space-y-3 text-sm text-white/75"><a className="block" href="tel:+917411606748"><FiPhone className="mr-2 inline text-brand-gold"/>+91 7411606748</a><a className="block" href="https://wa.me/918919602258"><FaWhatsapp className="mr-2 inline text-[#25D366]"/>+91 8919602258</a><a className="block" href="mailto:sreekhushitours@gmail.com">✉ sreekhushitours@gmail.com</a><p><FiMapPin className="mr-2 inline text-brand-gold"/>21 Krishna Reddy Building, Sompara Gate, Sarjapura, Bangalore, Karnataka 562125</p></div></div>
+        <div><h3 className="font-bold text-brand-gold">Follow Us</h3><div className="mt-5 flex gap-3"><span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10"><FaFacebookF/></span><span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10"><FaInstagram/></span><span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10"><FaYoutube/></span></div><p className="mt-7 text-lg font-black italic text-brand-gold">Travel Safe<br/>Travel Happy</p></div>
       </div>
-      <div className="border-t border-brand-gold/30 bg-brand-cream/70 py-4 text-center text-xs text-brand-dark/70">
-        <p>© {year} Sree Khushi Tours & Travels. All rights reserved.</p>
-        <p className="mt-1">Cab Service in Sarjapura | Airport Taxi | Local & Outstation Cabs | Bangalore.</p>
-      </div>
+      <div className="border-t border-white/10 px-5 py-4 text-center text-xs text-white/50">© {new Date().getFullYear()} Sree Khushi Tours & Travels. All Rights Reserved.</div>
     </footer>
   );
 }
