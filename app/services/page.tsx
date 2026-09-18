@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import CTAButtons from "@/components/CTAButtons";
 import { MotionSection } from "@/components/MotionSection";
-import { FiBriefcase, FiClock, FiMapPin, FiSmile, FiStar } from "react-icons/fi";
+import { FiBriefcase, FiClock, FiMapPin, FiStar } from "react-icons/fi";
 import { FaCarAlt, FaRoute } from "react-icons/fa";
 
 export const metadata: Metadata = {
@@ -47,12 +47,6 @@ const services = [
     desc: "Temple tour cabs from Sarjapura, Gunjur and Bangalore with patient drivers, flexible stops and clean vehicles.",
     ideal: ["Pilgrims", "Family elders"],
     icon: <FiStar />,
-  },
-  {
-    title: "Holiday / Tour Packages",
-    desc: "Custom cab packages for hill stations, beaches, heritage circuits and family holidays from Sarjapura, Gunjur and Bangalore.",
-    ideal: ["Friends", "Families", "Tourists"],
-    icon: <FiSmile />,
   },
 ];
 
