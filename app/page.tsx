@@ -17,11 +17,11 @@ const vehicles = [
 ];
 
 const services = [
-  { title: "Airport Transfers", text: "Pickup & Drop", image: "/airport-bg.png" },
+  { title: "Airport Transfers", text: "Pickup & Drop", image: "/hero-cab.png" },
   { title: "Outstation Cabs", text: "All India", image: "/temple-bg.png" },
   { title: "City Rides", text: "Local & Sightseeing", image: "/hero-cab.png" },
   { title: "Corporate Travel", text: "Business & Employees", image: "/about-bg.png" },
-  { title: "Monthly Rentals", text: "Long Term", image: "/fleet-bg.png" },
+  { title: "Monthly Rentals", text: "Long Term", image: "/fleet-sedan.png" },
 ];
 
 const trustPoints = [
@@ -102,7 +102,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-[linear-gradient(rgba(3,29,59,.88),rgba(3,29,59,.88)),url('/fleet-bg.png')] bg-cover bg-center py-12">
+      <section className="bg-[linear-gradient(rgba(3,29,59,.88),rgba(3,29,59,.88)),url('/bg-city.png')] bg-cover bg-center py-12">
         <div className="mx-auto max-w-7xl px-5 lg:px-10">
           <div className="flex flex-wrap items-end justify-between gap-5 text-white">
             <div><p className="section-kicker !text-brand-gold">Our Fleet</p><h2 className="mt-2 text-3xl font-black sm:text-4xl">Comfortable Rides for<br />Every Journey</h2><p className="mt-3 text-sm text-white/75">Well-maintained, clean and spacious vehicles to suit your travel needs.</p></div>
