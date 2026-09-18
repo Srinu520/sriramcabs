@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { FiMenu, FiPhone, FiX } from "react-icons/fi";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaCarSide, FaWhatsapp } from "react-icons/fa";
 
 const links = [
   { href: "/", label: "Home" },
@@ -23,11 +23,12 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-2 sm:px-6">
-        <Link href="/" className="shrink-0">
-          <div className="leading-none"><p className="text-xl font-black tracking-tight text-brand-dark sm:text-2xl"><span className="text-brand-gold">Sree</span> Khushi</p><p className="text-[10px] font-bold tracking-[.18em] text-brand-dark sm:text-xs">TOURS & TRAVELS</p></div>
+        <Link href="/" className="flex shrink-0 items-center gap-2.5">
+          <span className="flex h-11 w-11 items-center justify-center rounded-full bg-brand-gold text-brand-dark shadow-sm sm:h-12 sm:w-12"><FaCarSide className="text-xl sm:text-2xl" /></span>
+          <span className="leading-none"><span className="block text-[20px] font-black tracking-tight text-brand-dark sm:text-[22px]"><span className="text-brand-gold">Sree</span> Khushi</span><span className="mt-1 block text-[9px] font-extrabold tracking-[.18em] text-brand-dark sm:text-[10px]">TOURS & TRAVELS</span></span>
         </Link>
         <nav className="hidden items-center gap-1 text-sm font-bold text-brand-dark lg:flex">
-          {links.map((link) => link.external ? <a key={link.label} href={googleReviewsLink} target="_blank" rel="noreferrer" className="rounded-lg px-3 py-3 hover:bg-brand-cream">{link.label}</a> : <Link key={link.label} href={link.href} className={`rounded-lg px-3 py-3 ${pathname===link.href ? "text-brand-gold" : "hover:bg-brand-cream"}`}>{link.label}</Link>)}
+          {links.map((link) => link.external ? <a key={link.label} href={googleReviewsLink} target="_blank" rel="noreferrer" className="rounded-lg px-3 py-3 hover:bg-brand-cream">{link.label}</a> : <Link key={link.label} href={link.href} className={`rounded-lg px-3 py-3 transition ${pathname===link.href ? "border-b-2 border-brand-gold text-brand-gold" : "hover:bg-brand-cream"}`}>{link.label}</Link>)}
         </nav>
         <div className="hidden items-center gap-2 lg:flex">
           <a href="tel:+917411606748" className="rounded-full bg-brand-gold px-5 py-3 text-xs font-black text-brand-dark"><FiPhone className="mr-1 inline" />Call Now<br /><span className="font-bold">+91 7411606748</span></a>
