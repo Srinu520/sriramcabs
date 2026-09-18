@@ -3,101 +3,39 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { FiPhone, FiMenu, FiX, FiTruck } from "react-icons/fi";
+import { FiMenu, FiPhone, FiX } from "react-icons/fi";
+import { FaWhatsapp } from "react-icons/fa";
 
 const links = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
+  { href: "/about", label: "About Us" },
+  { href: "/fleet", label: "Our Fleet" },
   { href: "/services", label: "Services" },
-  { href: "/fleet", label: "Fleet" },
-  { href: "/temple-tours", label: "Temple Tours" },
-  { href: "/faq", label: "FAQ" },
+  { href: "/contact", label: "Google Reviews", external: true },
   { href: "/contact", label: "Contact" },
 ];
+
+const googleReviewsLink = "https://maps.app.goo.gl/EdXqAJ3U7193W6x67?g_st=ac";
 
 export default function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-
   return (
-    <header className="sticky top-0 z-30">
-      <div className="mx-auto max-w-6xl px-4 py-4">
-        <div className="glass relative flex items-center justify-between rounded-2xl px-4 py-3">
-          <Link href="/" className="flex items-center gap-2 font-semibold text-brand-dark">
-            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-brand-green to-brand-dark text-white shadow-glow">
-              <FiTruck className="text-lg" />
-            </span>
-            <div className="leading-tight">
-              <p className="text-base">Sree Khushi Tours & Travels</p>
-              <p className="text-xs text-brand-dark/70">Ride Safe. Travel Happy.</p>
-            </div>
-          </Link>
-
-          <nav className="hidden items-center gap-6 text-sm font-medium text-brand-dark/90 lg:flex">
-            {links.map((link) => {
-              const active = pathname === link.href;
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={`rounded-full px-3 py-2 transition-colors ${
-                    active ? "bg-brand-green/10 text-brand-dark" : "hover:text-brand-dark"
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              );
-            })}
-          </nav>
-
-          <div className="hidden lg:flex">
-            <a href="tel:+917411606748" className="btn-primary">
-              <FiPhone /> Call Now
-            </a>
-          </div>
-
-          <button
-            className="flex h-10 w-10 items-center justify-center rounded-xl border border-brand-gold/60 bg-white text-brand-dark shadow-soft lg:hidden"
-            onClick={() => setOpen((v) => !v)}
-            aria-label="Toggle navigation"
-          >
-            {open ? <FiX /> : <FiMenu />}
-          </button>
+    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-2 sm:px-6">
+        <Link href="/" className="shrink-0">
+          <div className="leading-none"><p className="text-xl font-black tracking-tight text-brand-dark sm:text-2xl"><span className="text-brand-gold">Sree</span> Khushi</p><p className="text-[10px] font-bold tracking-[.18em] text-brand-dark sm:text-xs">TOURS & TRAVELS</p></div>
+        </Link>
+        <nav className="hidden items-center gap-1 text-sm font-bold text-brand-dark lg:flex">
+          {links.map((link) => link.external ? <a key={link.label} href={googleReviewsLink} target="_blank" rel="noreferrer" className="rounded-lg px-3 py-3 hover:bg-brand-cream">{link.label}</a> : <Link key={link.label} href={link.href} className={`rounded-lg px-3 py-3 ${pathname===link.href ? "text-brand-gold" : "hover:bg-brand-cream"}`}>{link.label}</Link>)}
+        </nav>
+        <div className="hidden items-center gap-2 lg:flex">
+          <a href="tel:+917411606748" className="rounded-full bg-brand-gold px-5 py-3 text-xs font-black text-brand-dark"><FiPhone className="mr-1 inline" />Call Now<br /><span className="font-bold">+91 7411606748</span></a>
+          <a href="https://wa.me/918919602258" target="_blank" rel="noreferrer" className="rounded-full bg-[#25D366] px-5 py-3 text-xs font-black text-white"><FaWhatsapp className="mr-1 inline" />WhatsApp<br /><span className="font-bold">+91 8919602258</span></a>
         </div>
-
-        {open && (
-          <div className="mt-3 rounded-2xl border border-brand-gold/40 bg-white/90 p-4 shadow-soft lg:hidden">
-            <nav className="flex flex-col gap-3 text-sm font-medium text-brand-dark/90">
-              {links.map((link) => {
-                const active = pathname === link.href;
-                return (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    onClick={() => setOpen(false)}
-                    className={`rounded-xl px-3 py-2 ${
-                      active ? "bg-brand-green/10 text-brand-dark" : "hover:bg-brand-cream"
-                    }`}
-                  >
-                    {link.label}
-                  </Link>
-                );
-              })}
-            </nav>
-            <div className="mt-4 flex gap-3">
-              <a href="tel:+917411606748" className="btn-primary w-full justify-center">
-                <FiPhone /> Call Now
-              </a>
-              <a
-                href="https://wa.me/918919602258?text=Hi%20Sree%20Khushi%20Tours%20%26%20Travels,%20I%20want%20to%20book%20a%20cab."
-                className="btn-secondary w-full justify-center"
-              >
-                WhatsApp
-              </a>
-            </div>
-          </div>
-        )}
+        <button className="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 lg:hidden" onClick={()=>setOpen(v=>!v)} aria-label="Toggle menu">{open?<FiX/>:<FiMenu/>}</button>
       </div>
+      {open && <div className="border-t border-slate-200 bg-white p-4 lg:hidden"><div className="flex flex-col gap-2">{links.map(link=>link.external?<a key={link.label} href={googleReviewsLink} target="_blank" rel="noreferrer" onClick={()=>setOpen(false)} className="rounded-lg px-3 py-2">{link.label}</a>:<Link key={link.label} href={link.href} onClick={()=>setOpen(false)} className="rounded-lg px-3 py-2">{link.label}</Link>)}</div><div className="mt-3 grid grid-cols-2 gap-2"><a href="tel:+917411606748" className="btn-primary bg-brand-gold !text-brand-dark"><FiPhone/>Call</a><a href="https://wa.me/918919602258" className="btn-secondary"><FaWhatsapp/>WhatsApp</a></div></div>}
     </header>
   );
 }
