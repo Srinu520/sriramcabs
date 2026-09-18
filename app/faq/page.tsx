@@ -21,11 +21,6 @@ const faqs = [
       "All types of vehicles: Hatchback, Sedan, SUV, Tempo Traveller and Luxury vehicles. We assign based on your trip size and luggage.",
   },
   {
-    question: "How is outstation pricing calculated?",
-    answer:
-      "Outstation rides have a 300 KM/day minimum, ₹13/km, ₹400/day driver bata. Toll, parking and temporary permits are additional.",
-  },
-  {
     question: "Can I get a temple tour itinerary?",
     answer:
       "Yes, we customise temple and pilgrimage tours with early morning pick-ups, darshan timing alignment and flexible stops.",
